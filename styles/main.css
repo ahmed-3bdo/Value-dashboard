@@ -87,6 +87,12 @@ a:hover, .btn:hover {
   max-width: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  #dashboard .navbar .navbar-brand {
+    margin-right: 0;
+  }
+}
+
 #dashboard .navbar .navbar__nav .nav__item {
   padding: 5px 40px;
   text-transform: uppercase;
@@ -113,6 +119,12 @@ a:hover, .btn:hover {
           transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 768px) {
+  #dashboard .navbar .nav__form .search-icon {
+    top: 32%;
+  }
+}
+
 #dashboard .navbar .nav__user .user__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,8 +133,9 @@ a:hover, .btn:hover {
 
 @media screen and (max-width: 768px) {
   #dashboard .navbar .nav__user .user__items {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -203,6 +216,15 @@ a:hover, .btn:hover {
 
 #dashboard .navbar .nav__user .user__items .user__item.dropdown .dropdown-menu a:hover {
   background: var(--bkg-clr-dark);
+}
+
+@media screen and (max-width: 768px) {
+  #dashboard .navbar .nav__user .user__items .user__item {
+    padding: 0 !important;
+    width: auto;
+    height: 50px;
+    margin: 3px;
+  }
 }
 
 #dashboard .navbar .navbar-toggler {
@@ -425,7 +447,7 @@ a:hover, .btn:hover {
 
 #dashboard .dashboard-content .dashboard__main-content > div {
   padding: 15px 40px;
-  height: calc(100vh - 96px);
+  height: calc(100vh - 74px);
   overflow: hidden;
   overflow-y: auto;
 }
@@ -603,7 +625,6 @@ a:hover, .btn:hover {
 #dashboard .dashboard-content .dashboard__main-content .parameters-text .parameter h3 {
   font-size: 16px;
   line-height: 1.4;
-  min-height: 48px;
   text-align: center;
   margin-top: 15px;
 }

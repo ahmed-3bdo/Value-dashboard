@@ -1,7 +1,7 @@
 var options = {
     series: [{
     name: 'Inflation',
-    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+    data: [1398, 826, 819, 709, 610, 539, 397, 310, 307, 284]
   }],
     chart: {
     height: 250,
@@ -18,7 +18,7 @@ var options = {
   dataLabels: {
     enabled: true,
     formatter: function (val) {
-      return val + "%";
+      return val ;
     },
     offsetY: -20,
     style: {
@@ -28,7 +28,7 @@ var options = {
   },
   
   xaxis: {
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    categories: ["Integrity", "Integrity", "Respect", "Teamwork", "Excellence", "Accountability", "Commitment", "Quality", "Transparency", "Honesty"],
     position: 'top',
     axisBorder: {
       show: false
@@ -60,6 +60,7 @@ var options = {
       show: false,
     },
     labels: {
+
       show: false,
       formatter: function (val) {
         return val + "%";

@@ -100,6 +100,9 @@ a, .btn {
             img {
                 max-width: 50px;
             }
+            @media screen and (max-width: 768px) {
+                margin-right: 0;
+            }
         }
         .navbar__nav {
             // navbar links
@@ -122,13 +125,16 @@ a, .btn {
                 left: 20px;
                 top: 50%;
                 transform: translate(-50%, -50%);
+                @media screen and (max-width: 768px) {
+                    top: 32%;
+                }
             }
         } 
         .nav__user {
             .user__items {
                 display: flex;
                 @media screen and (max-width: 768px) {
-                    justify-content: space-around;;
+                    align-items: center;
                 }
                 .user__item {
                     background: none;
@@ -188,6 +194,12 @@ a, .btn {
                                 }
                             }
                         }
+                    }
+                    @media screen and (max-width: 768px) {
+                        padding: 0 !important;
+                        width: auto;
+                        height: 50px;
+                        margin: 3px;
                     }
                 }
             }
@@ -357,7 +369,7 @@ a, .btn {
             width: 100%;
             > div {
                 padding: 15px 40px;
-                height: calc(100vh - 96px);
+                height: calc(100vh - 74px);
                 overflow: hidden;
                 overflow-y: auto;
                 @media screen and (max-width: 768px) {
@@ -478,7 +490,6 @@ a, .btn {
                     h3 {
                         font-size: 16px;
                         line-height: 1.4;
-                        min-height: 48px;
                         text-align: center;
                         margin-top: 15px;
                         @media screen and (max-width: 768px) {
