@@ -25,7 +25,7 @@
               <img src="imgs/logo-light.png" alt="">
             </a>
             <!-- Navigation User Items will be Visible in Mobile Only -->
-            <div class="nav__user nav__user--mobile  d-flex d-md-none">
+            <div class="nav__user nav__user--mobile  d-flex d-lg-none">
               <div class="user__items">
                 <button class="btn user__item sign-button btn-link my-2 my-sm-0" type="submit">Sign In</button>
                 <button class="btn user__item theme-toggler">
@@ -82,7 +82,7 @@
                 </button>
               </form>
               <!-- Navigation User Items -->
-              <div class="nav__user d-none d-sm-flex">
+              <div class="nav__user d-none d-lg-flex">
                 <div class="user__items">
                   <button class="btn user__item sign-button btn-link my-2 my-sm-0" type="submit">Sign In</button>
                   <button class="btn user__item theme-toggler">
@@ -116,7 +116,7 @@
             <!-- Side bar Section -->
             <div class="side-bar">
               <!-- Side Bar Toggler Button -->
-              <button type="button" class="btn side-bar__btn-toggler d-block d-md-none">
+              <button type="button" class="btn side-bar__btn-toggler d-block d-lg-none">
                 <i class="fa fa-angle-right open" aria-hidden="true"></i>
                 <i class="fa fa-times close" aria-hidden="true"></i>
               </button>
@@ -169,133 +169,213 @@
             <!-- Main Contetnt-->
             
             <div class="dashboard__main-content">
-                <div class="container-fluid">
-                  <!-- Countries and sectors box -->
-                  <div class="row countries-sectors">
-                    <div class="col-xl countries-sectors__countries">
-                      <button type="button" class="btn prev__country prev-next__btn gradient-border d-none d-md-block">
-                        Saudia Arabia
-                      </button>
-                      <div class="all__contries sellect-box">
-                        <div class="left__arrows arrows d-none d-md-block">
-                          <i class="fa fa-angle-left" aria-hidden="true"></i>
-                          <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                          <label class="label d-block d-md-none">Select Country</label>
-                          <input list="countires" placeholder="World Wide" class="search-country__box">
-                          <datalist id="countires">
-                            <option value="World Wide">
-                            <option value="Saudia Arabia">
-                            <option value="Egypt">
-                          </datalist>
-                        </div>
-                        <div class="right__arrows arrows d-none d-md-block">
-                          <i class="fa fa-angle-right" aria-hidden="true"></i>
-                          <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        </div>
+              <!-- Home Page -->
+              <div id="home-page" class="container-fluid home-page ">
+                <!-- Countries and sectors box -->
+                <div class="row countries-sectors">
+                  <div class="col-xl countries-sectors__countries">
+                    <button type="button" class="btn prev__country prev-next__btn gradient-border d-none d-md-block">
+                      Saudia Arabia
+                    </button>
+                    <div class="all__contries sellect-box">
+                      <div class="left__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
                       </div>
-                      <button type="button" class="btn next__country prev-next__btn gradient-border d-none d-md-block">
-                        Egypt
-                      </button>
-                    </div>
-                    <div class="col-xl countries-sectors__sectors">
-                      <button type="button" class="btn prev__sectors prev-next__btn gradient-border d-none d-md-block">
-                        Education
-                      </button>
-                      <div class="all__sectors sellect-box">
-                        <div class="left__arrows arrows d-none d-md-block">
-                          <i class="fa fa-angle-left" aria-hidden="true"></i>
-                          <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                          <label class="label d-block d-md-none">Select Sector</label>
-                          <input list="sectors" placeholder="World Wide" class="search-country__box">
-                          <datalist id="sectors">
-                            <option value="World Wide">
-                            <option value="Education">
-                            <option value="Finincial">
-                          </datalist>
-                        </div>
-                        <div class="right__arrows arrows d-none d-md-block">
-                          <i class="fa fa-angle-right" aria-hidden="true"></i>
-                          <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        </div>
+                      <div>
+                        <label class="label d-block d-md-none">Select Country</label>
+                        <input list="countires" placeholder="World Wide" class="search-country__box">
+                        <datalist id="countires">
+                          <option value="World Wide">
+                          <option value="Saudia Arabia">
+                          <option value="Egypt">
+                        </datalist>
                       </div>
-                      <button type="button" class="btn next__sectors prev-next__btn gradient-border d-none d-md-block">
-                        Finincial
-                      </button>
+                      <div class="right__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
                     </div>
+                    <button type="button" class="btn next__country prev-next__btn gradient-border d-none d-md-block">
+                      Egypt
+                    </button>
                   </div>
+                  <div class="col-xl countries-sectors__sectors">
+                    <button type="button" class="btn prev__sectors prev-next__btn gradient-border d-none d-md-block">
+                      Education
+                    </button>
+                    <div class="all__sectors sellect-box">
+                      <div class="left__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <label class="label d-block d-md-none">Select Sector</label>
+                        <input list="sectors" placeholder="World Wide" class="search-country__box">
+                        <datalist id="sectors">
+                          <option value="World Wide">
+                          <option value="Education">
+                          <option value="Finincial">
+                        </datalist>
+                      </div>
+                      <div class="right__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <button type="button" class="btn next__sectors prev-next__btn gradient-border d-none d-md-block">
+                      Finincial
+                    </button>
+                  </div>
+                </div>
 
-                  <!-- Parameters Section -->
-                  <div class="row parameters-text gradient-border light-background">
-                    <!-- parameter -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                      <img src="imgs/country-numbers.png" class="parameter__icon" alt="parameter-icon"/>
-                      <h3>Number of Countries </h3>
-                        <p>204</p>
-                    </div>
-                    <!-- parameter -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                      <img src="imgs/sector-numbers.png" class="parameter__icon" alt="parameter-icon"/>
-                      <h3>Number of Sectors </h3>
-                        <p>13</p>
-                    </div>
-                    <!-- parameter -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                      <img src="imgs/sampling.png" class="parameter__icon gradient-border" alt="parameter-icon"/>
-                      <h3>Sampling Size: (Co.)</h3>
-                        <p>7004</p>
-                    </div>
-                    <!-- parameter -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                      <img src="imgs/without-values.png" class="parameter__icon" alt="parameter-icon"/>
-                      <h3>With Values: (Co.)</h3>
-                        <p>4175</p>
-                    </div>
-                    <!-- parameter -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                      <img src="imgs/with-values.png" class="parameter__icon" alt="parameter-icon"/>
-                      <h3>Without Values: (Co.)</h3>
-                        <p>2905</p>
-                    </div>
-                    <!-- parameter -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                      <img src="imgs/common-values.png" class="parameter__icon" alt="parameter-icon"/>
-                      <h3>Common Values </h3>
-                        <p>1977</p>
+                <!-- Parameters Section -->
+                <div class="row parameters-text gradient-border light-background">
+                  <!-- parameter -->
+                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
+                    <img src="imgs/country-numbers.png" class="parameter__icon" alt="parameter-icon"/>
+                    <h3>Number of Countries </h3>
+                      <p>204</p>
+                  </div>
+                  <!-- parameter -->
+                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
+                    <img src="imgs/sector-numbers.png" class="parameter__icon" alt="parameter-icon"/>
+                    <h3>Number of Sectors </h3>
+                      <p>13</p>
+                  </div>
+                  <!-- parameter -->
+                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
+                    <img src="imgs/sampling.png" class="parameter__icon gradient-border" alt="parameter-icon"/>
+                    <h3>Sampling Size: (Co.)</h3>
+                      <p>7004</p>
+                  </div>
+                  <!-- parameter -->
+                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
+                    <img src="imgs/without-values.png" class="parameter__icon" alt="parameter-icon"/>
+                    <h3>With Values: (Co.)</h3>
+                      <p>4175</p>
+                  </div>
+                  <!-- parameter -->
+                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
+                    <img src="imgs/with-values.png" class="parameter__icon" alt="parameter-icon"/>
+                    <h3>Without Values: (Co.)</h3>
+                      <p>2905</p>
+                  </div>
+                  <!-- parameter -->
+                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
+                    <img src="imgs/common-values.png" class="parameter__icon" alt="parameter-icon"/>
+                    <h3>Common Values </h3>
+                      <p>1977</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- Parameters Cahrt Section -->
+                  <div class="col-xl-4 mt-4 parameters">
+                    <div id="parameters-chart" ></div>
+                  </div>
+                  <!-- Columns Chart Section -->
+                  <div class="col-xl-8 mt-4">
+                    <div id="columns-chart" >
                     </div>
                   </div>
-                  <div class="row">
-                    <!-- Parameters Cahrt Section -->
-                    <div class="col-xl-4 mt-4 parameters">
-                      <div id="parameters-chart" ></div>
-                    </div>
-                    <!-- Columns Chart Section -->
-                    <div class="col-xl-8 mt-4">
-                      <div id="columns-chart" >
+                </div>
+                <!-- Map Chart Section -->
+                <div class="row mt-4">
+                  <div class="col-12 world-map__section">
+                    <div class="keymap__box">
+                      <div class="keymap__icon">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                      </div>
+                      <div class="keymap__content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores blanditiis quaerat natus debitis ipsa, nobis nihil vel veniam error ut quo alias eveniet doloremque, dolore dolor voluptatem, rem illum deserunt.
                       </div>
                     </div>
-                  </div>
-                  <!-- Map Chart Section -->
-                  <div class="row mt-4">
-                    <div class="col-12">
-                      <div id="world-map"></div>
-                    </div>
+                    <div id="world-map"></div>
                   </div>
                 </div>
               </div>
 
+              <!-- World Wide Page -->
+              <div id="world-wide-page" class="container-fluid world-wide-page d-none">
+                <!-- Countries and sectors box -->
+                <!-- Sellector Box -->
+                <div class="row countries-sectors">
+                  <div class="col-xl countries-sectors__countries">
+                    <div class="all__contries sellect-box">
+                      <div class="left__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <label class="label d-block d-md-none">Select Country</label>
+                        <input list="countires" placeholder="World Wide" class="search-country__box">
+                        <datalist id="countires">
+                          <option value="World Wide">
+                          <option value="Saudia Arabia">
+                          <option value="Egypt">
+                        </datalist>
+                      </div>
+                      <div class="right__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Sellector Box -->
+                  <div class="col-xl countries-sectors__countries">
+                    <div class="all__contries sellect-box">
+                      <div class="left__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <label class="label d-block d-md-none">Select Country</label>
+                        <input list="countires" placeholder="World Wide" class="search-country__box">
+                        <datalist id="countires">
+                          <option value="World Wide">
+                          <option value="Saudia Arabia">
+                          <option value="Egypt">
+                        </datalist>
+                      </div>
+                      <div class="right__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Sellector Box -->
+                  <div class="col-xl countries-sectors__sectors">
+                    <div class="all__sectors sellect-box">
+                      <div class="left__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <label class="label d-block d-md-none">Select Sector</label>
+                        <input list="sectors" placeholder="World Wide" class="search-country__box">
+                        <datalist id="sectors">
+                          <option value="World Wide">
+                          <option value="Education">
+                          <option value="Finincial">
+                        </datalist>
+                      </div>
+                      <div class="right__arrows arrows d-none d-md-block">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+              </div>
               <!-- Help Icon -->
               <div class="help">
-                <button class="div help__icon">
-                  <div class="help__icon--box">
-                    <span>Help</span>
-                  </div>
-                  <div class="help__icon--skew"></div>
-                </button>
+                <div class="help__icon">
+                  <img src="imgs/help-icon-light.png" alt="help-icon">
+                </div>
               </div>
+
             </div>
         </div>
     </div>
