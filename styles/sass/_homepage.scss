@@ -43,8 +43,8 @@ a, .btn {
     &:hover {
         color: var(--prim-main-txt-clr) !important;
     }
-}
-
+} 
+// Buttons Style
 .btn {
     background: var(--background-dark);
     padding: 5px !important;
@@ -52,6 +52,14 @@ a, .btn {
     outline: 0 !important;
 }
 
+// Front Boxes Style and background
+.bkg-box,
+#world-map .jvectormap-container {
+    background: var(--bkg-clr-box-dark) !important;
+    border-radius: 5px;
+}
+
+// Boxes With Gradient Border
 .gradient-border {
     position: relative;
     border-radius: 3px;
@@ -74,6 +82,11 @@ a, .btn {
 .btn, .form-control {
     outline: 0 !important;
     box-shadow: none !important;
+}
+
+// SelectBox Left And Right Arrows
+.arrows-rest-pages {
+    margin: 25px 25px 0 !important; 
 }
 
 // Form & Inputs style and background
@@ -266,7 +279,7 @@ a, .btn {
                 border-radius: 0;
                 border-top-right-radius: 50px;
                 border-bottom-right-radius: 50px;
-                background-color: var(--prim-bkg-clr-l);
+                background: var(--prim-bkg-clr-l);
                 width: 30px;
                 height: 30px;
                 display: flex;
@@ -306,11 +319,13 @@ a, .btn {
                     align-items: flex-start;
                     padding: 20px 0;
                     .side-bar__item {
+                        width: 100%;
                         padding: 3px 0;
                         a {
                             display: flex;
                             justify-content:flex-start;
                             align-items: center;
+                            width: 100%;
                             padding: 10px;
                             position: relative;
                             text-decoration: none;
@@ -345,19 +360,22 @@ a, .btn {
                         padding-bottom: 90px;
                     }
                 }
-                &:hover{
-                    width: 395px;
-                    border-top-right-radius: 5px;
-                    border-bottom-right-radius: 5px;
-                    .side-bar__item {
-                        a {
-                            .side-bar__item--text {
-                                opacity: 1;
+                @media screen and (min-width: 768px) {
+                    &:hover{
+                        width: 395px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        .side-bar__item {
+                            a {
+                                .side-bar__item--text {
+                                    opacity: 1;
+                                }
                             }
                         }
+        
                     }
-    
                 }
+
             }
             &.opened {
                 left: 0;
@@ -402,7 +420,6 @@ a, .btn {
             }
             // Countries and sectors section
             .countries-sectors {
-                justify-content: space-between;
                 > div {
                     display: flex;
                     justify-content: space-around;
@@ -422,7 +439,9 @@ a, .btn {
                         }
                     }
                     .sellect-box {
-                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
                         @media screen and (max-width: 768px) {
                             width: 100%;
                         }
@@ -431,46 +450,51 @@ a, .btn {
                             color: var(--sec-txt-clr);
                         }
                         .arrows {
-                            position: absolute;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
+                            display: flex;
+                            flex-wrap: nowrap;
+                            margin: 0 25px;
                             i {
                                 color: var(--prim-clr-grad-one);
                                 font-size: 12px;
                             }
-                            &.left__arrows {
-                                margin-left: -30px;
-                                @media screen and (max-width: 768px) {
-                                    margin-left: 12px;
-                                }
-                            }
-                            &.right__arrows {
-                                left: auto;
-                                right: 0;
-                                margin-right: -38px;
-                                @media screen and (max-width: 768px) {
-                                    margin-right: -1px;
-                                }
-                            }
+                            // &.left__arrows {
+                            //     // margin-left: -30px;
+                            //     @media screen and (max-width: 768px) {
+                            //         // margin-left: 12px;
+                            //     }
+                            // }
+                            // &.right__arrows {
+                            //     // left: auto;
+                            //     // right: 0;
+                            //     // margin-right: -38px;
+                            //     @media screen and (max-width: 768px) {
+                            //         // margin-right: -1px;
+                            //     }
+                            // }
                         }
-                        .search-country__box {
-                            border: none;
-                            border-radius: 5px;
-                            color: var(--prim-main-txt-clr);
-                            font-size: 16px;
-                            font-weight: bold;
-                            text-align: center;
-                            outline: none;
-                            padding: 5px 0;
-                            border: 1px solid var(--border-clr);
-                            &::placeholder {
-                                color: var(--main-txt-clr);
-                            }
+                        .search-div {
                             @media screen and (max-width: 768px) {
-                                font-size: 16px;
                                 width: 100%;
-                                margin: 10px 0;
-                                padding: 8px 0;
+                            }
+                            .search-country__box {
+                                border: none;
+                                border-radius: 5px;
+                                color: var(--prim-main-txt-clr);
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                outline: none;
+                                padding: 5px 0;
+                                border: 1px solid var(--border-clr);
+                                &::placeholder {
+                                    color: var(--main-txt-clr);
+                                }
+                                @media screen and (max-width: 768px) {
+                                    font-size: 16px;
+                                    width: 100%;
+                                    margin: 10px 0;
+                                    padding: 8px 0;
+                                }
                             }
                         }
                     }
@@ -528,11 +552,6 @@ a, .btn {
                     }
                 }
             }
-        }
-
-        #parameters-chart, #columns-chart, #world-map .jvectormap-container {
-            background: var(--bkg-clr-box-dark) !important;
-            border-radius: 5px;
         }
 
         .world-map__section {
@@ -595,6 +614,9 @@ a, .btn {
         }
  
     }
+    .benchmark-page {
+        display: none;
+    }
 }
 
 
@@ -620,6 +642,9 @@ a, .btn {
         --background-prim-border: radial-gradient(circle, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark-l, 1) 0%, var(--prim-bkg-clr) 140%);
 
     // Main Style
+    body {
+        background: var(--bkg-clr-dark);
+    }
     .btn {
         background: var(--bkg-clr-dark-l);
     }

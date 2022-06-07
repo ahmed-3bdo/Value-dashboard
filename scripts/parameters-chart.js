@@ -35,7 +35,7 @@ var options = {
   },
   fill: {
     type: 'gradient',
-    colors: ['#1C9FD6' , '#0A2F85', '#14A9BC', '#6E7C82', '#24C6C8'],
+    colors: ['#1C9FD6' , '#0A2F85', '#FEB019', '#6E7C82', '#24C6C8'],
   },
   labels: ['Countries', 'Sectors', 'Companies', `Without Values(Co.)`, 'Without Values(Co.)'],
   };

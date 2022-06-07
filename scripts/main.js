@@ -17,3 +17,12 @@ $('.keymap__icon').on('click', function() {
   $(this).toggleClass('opened');
   $('.keymap__content').slideToggle();
 });
+
+// Switch Between Pages
+$('.page-section-link').on('click', function () {
+  $('.page-section').hide();
+  $($(this).attr('data-class')).show();
+  if ($(window).width() < 768) {
+    $('.side-bar').removeClass('opened');
+  }
+})

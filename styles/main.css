@@ -40,6 +40,12 @@ a:hover, .btn:hover {
   outline: 0 !important;
 }
 
+.bkg-box,
+#world-map .jvectormap-container {
+  background: var(--bkg-clr-box-dark) !important;
+  border-radius: 5px;
+}
+
 .gradient-border {
   position: relative;
   border-radius: 3px;
@@ -64,6 +70,10 @@ a:hover, .btn:hover {
   outline: 0 !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.arrows-rest-pages {
+  margin: 25px 25px 0 !important;
 }
 
 .form-control, .search-country__box {
@@ -314,7 +324,7 @@ a:hover, .btn:hover {
   border-radius: 0;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  background-color: var(--prim-bkg-clr-l);
+  background: var(--prim-bkg-clr-l);
   width: 30px;
   height: 30px;
   display: -webkit-box;
@@ -384,6 +394,7 @@ a:hover, .btn:hover {
 }
 
 #dashboard .dashboard-content .side-bar > div .side-bar__items .side-bar__item {
+  width: 100%;
   padding: 3px 0;
 }
 
@@ -397,6 +408,7 @@ a:hover, .btn:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   padding: 10px;
   position: relative;
   text-decoration: none;
@@ -439,14 +451,15 @@ a:hover, .btn:hover {
   }
 }
 
-#dashboard .dashboard-content .side-bar > div:hover {
-  width: 395px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-#dashboard .dashboard-content .side-bar > div:hover .side-bar__item a .side-bar__item--text {
-  opacity: 1;
+@media screen and (min-width: 768px) {
+  #dashboard .dashboard-content .side-bar > div:hover {
+    width: 395px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #dashboard .dashboard-content .side-bar > div:hover .side-bar__item a .side-bar__item--text {
+    opacity: 1;
+  }
 }
 
 #dashboard .dashboard-content .side-bar.opened {
@@ -494,12 +507,6 @@ a:hover, .btn:hover {
   }
 }
 
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,7 +537,15 @@ a:hover, .btn:hover {
 }
 
 #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
@@ -545,10 +560,12 @@ a:hover, .btn:hover {
 }
 
 #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .arrows {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 25px;
 }
 
 #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .arrows i {
@@ -556,29 +573,13 @@ a:hover, .btn:hover {
   font-size: 12px;
 }
 
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .arrows.left__arrows {
-  margin-left: -30px;
-}
-
 @media screen and (max-width: 768px) {
-  #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .arrows.left__arrows {
-    margin-left: 12px;
+  #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-div {
+    width: 100%;
   }
 }
 
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .arrows.right__arrows {
-  left: auto;
-  right: 0;
-  margin-right: -38px;
-}
-
-@media screen and (max-width: 768px) {
-  #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .arrows.right__arrows {
-    margin-right: -1px;
-  }
-}
-
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-country__box {
+#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-div .search-country__box {
   border: none;
   border-radius: 5px;
   color: var(--prim-main-txt-clr);
@@ -590,24 +591,24 @@ a:hover, .btn:hover {
   border: 1px solid var(--border-clr);
 }
 
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-country__box::-webkit-input-placeholder {
+#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-div .search-country__box::-webkit-input-placeholder {
   color: var(--main-txt-clr);
 }
 
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-country__box:-ms-input-placeholder {
+#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-div .search-country__box:-ms-input-placeholder {
   color: var(--main-txt-clr);
 }
 
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-country__box::-ms-input-placeholder {
+#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-div .search-country__box::-ms-input-placeholder {
   color: var(--main-txt-clr);
 }
 
-#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-country__box::placeholder {
+#dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-div .search-country__box::placeholder {
   color: var(--main-txt-clr);
 }
 
 @media screen and (max-width: 768px) {
-  #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-country__box {
+  #dashboard .dashboard-content .dashboard__main-content .countries-sectors > div .sellect-box .search-div .search-country__box {
     font-size: 16px;
     width: 100%;
     margin: 10px 0;
@@ -676,11 +677,6 @@ a:hover, .btn:hover {
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 0px;
-}
-
-#dashboard .dashboard-content #parameters-chart, #dashboard .dashboard-content #columns-chart, #dashboard .dashboard-content #world-map .jvectormap-container {
-  background: var(--bkg-clr-box-dark) !important;
-  border-radius: 5px;
 }
 
 #dashboard .dashboard-content .world-map__section .keymap__box {
@@ -752,6 +748,10 @@ a:hover, .btn:hover {
   }
 }
 
+#dashboard .benchmark-page {
+  display: none;
+}
+
 :root.light-theme {
   --bkg-clr-dark: rgb(240, 241, 255);
   --bkg-clr-dark-transparent: 255, 255, 255;
@@ -766,6 +766,10 @@ a:hover, .btn:hover {
   --prim-sec-txt-clr-l: rgb(0, 150, 171);
   --background-dark: radial-gradient(circle, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark) 90%);
   --background-prim-border: radial-gradient(circle, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark-l, 1) 0%, var(--prim-bkg-clr) 140%);
+}
+
+:root.light-theme body {
+  background: var(--bkg-clr-dark);
 }
 
 :root.light-theme .btn {
