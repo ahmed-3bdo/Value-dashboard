@@ -87,6 +87,14 @@ a:hover, .btn:hover {
   border: 1px solid var(--border-clr);
 }
 
+.page-section {
+  display: none;
+}
+
+.benchmarking-my-values-page {
+  display: block;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -367,12 +375,20 @@ a:hover, .btn:hover {
           justify-content: space-between;
   background: var(--background-dark);
   width: 90px;
-  height: calc(100vh - 76px);
+  height: calc(100vh - 77px);
   overflow: hidden;
   overflow-y: auto;
   padding: 0 14px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  #dashboard .dashboard-content .side-bar > div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 #dashboard .dashboard-content .side-bar > div::-webkit-scrollbar {
@@ -445,12 +461,6 @@ a:hover, .btn:hover {
   color: var(--prim-main-txt-clr);
 }
 
-@media screen and (max-width: 768px) {
-  #dashboard .dashboard-content .side-bar > div a.terms {
-    padding-bottom: 90px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   #dashboard .dashboard-content .side-bar > div:hover {
     width: 395px;
@@ -496,7 +506,7 @@ a:hover, .btn:hover {
 
 #dashboard .dashboard-content .dashboard__main-content > div {
   padding: 15px 40px;
-  height: calc(100vh - 76px);
+  height: calc(100vh - 77px);
   overflow: hidden;
   overflow-y: auto;
 }
@@ -708,7 +718,7 @@ a:hover, .btn:hover {
 }
 
 #dashboard .dashboard-content .world-map__section .keymap__box .keymap__content {
-  background: var(--background-dark);
+  background: var(--bkg-clr-dark-l);
   border-radius: 5px;
   border-top-left-radius: 0;
   padding: 20px;
@@ -748,8 +758,52 @@ a:hover, .btn:hover {
   }
 }
 
-#dashboard .benchmark-page {
-  display: none;
+#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content {
+  background-color: var(--bkg-clr-dark-l);
+}
+
+#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-header .close {
+  opacity: 1;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  color: var(--white);
+  outline: 0;
+}
+
+@media screen and (min-width: 991px) {
+  #dashboard .benchmarking-my-values-page form .submit-form {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+}
+
+#dashboard .benchmarking-my-values-page form .submit-form button[type=submit] {
+  background: var(--prim-bkg-clr);
+  border-radius: 10px;
+  border: none;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer;
+}
+
+#dashboard .benchmarking-my-values-page form .submit-form button[type=submit] i {
+  position: absolute;
+  top: 31%;
+  left: 52%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 34px;
+  color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  #dashboard .benchmarking-my-values-page .countries-sectors .values-section .search-div {
+    width: auto;
+  }
 }
 
 :root.light-theme {

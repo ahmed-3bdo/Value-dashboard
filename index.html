@@ -135,7 +135,7 @@
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="#" class="page-section-link" data-class=".corporate-vale-page">
+                <a href="#" class="page-section-link" data-class=".corporate-value-page">
                   <img src="imgs/corporate-values.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Corporate Values Profiling by Country</span>
                 </a>
@@ -147,7 +147,7 @@
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="#" class="page-section-link" data-class=".sectoral-cor-page">
+                <a href="#" class="page-section-link" data-class=".benchmarking-my-values-page">
                   <img src="imgs/sectoral.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Sectoral Corporate Values by Country</span>
                 </a>
@@ -160,7 +160,7 @@
               </li>
             </ul>
             <hr>
-            <a class="terms" href="#" data-target="#termsleModal">
+            <a class="terms" href="#" data-toggle="modal" data-target="#termsleModal">
               <span class="terms side-bar__item--text">Terms</span>
             </a>
           </div>
@@ -295,7 +295,7 @@
           </div>
 
           <!-- Benchmark Page -->
-          <div id="world-wide-page" class="container-fluid page-section benchmark-page">
+          <div id="benchmark-page" class="container-fluid page-section benchmark-page">
             <!-- Countries and sectors box -->
             <!-- Sellector Box -->
             <div class="row countries-sectors">
@@ -378,14 +378,194 @@
               <div class="col-xl-9 mt-4">
                 <div id="benchmark-line-mix-chart" class="benchmark-line-mix-chart bkg-box"></div>
               </div>
-            </div> <!-- End Benchmark Page -->
-          </div>
+            </div> <!-- End Benchmark Dashboard -->
+          </div><!-- End Benchmark page-->
+
+          <!-- Benchmarking My Values Page -->
+          <div id="benchmarking-my-values-page" class="container-fluid page-section benchmarking-my-values-page">
+            <!-- Sellector Box -->
+            <h2 class="mt-3">My Values</h2>
+            <div class="row countries-sectors mb-4">
+                <div class="col-xl countries-sectors__countries">
+                  <div class="all__contries sellect-box">
+                    <div class="left__arrows arrows arrows-rest-pages d-none d-md-block">
+                      <i class="fa fa-angle-left" aria-hidden="true"></i>
+                      <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="search-div">
+                      <label class="label d-block">Select Country</label>
+                      <input list="countires" placeholder="World Wide" class="search-country__box">
+                      <datalist id="countires">
+                        <option value="World Wide">
+                        <option value="Saudia Arabia">
+                        <option value="Egypt">
+                      </datalist>
+                    </div>
+                    <div class="right__arrows arrows arrows-rest-pages d-none d-md-block">
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sellector Box -->
+                <div class="col-xl countries-sectors__countries">
+                  <div class="all__contries sellect-box">
+                    <div class="left__arrows arrows arrows-rest-pages d-none d-md-block">
+                      <i class="fa fa-angle-left" aria-hidden="true"></i>
+                      <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="search-div">
+                      <label class="label d-block">Select Country</label>
+                      <input list="countires" placeholder="World Wide" class="search-country__box">
+                      <datalist id="countires">
+                        <option value="World Wide">
+                        <option value="Saudia Arabia">
+                        <option value="Egypt">
+                      </datalist>
+                    </div>
+                    <div class="right__arrows arrows arrows-rest-pages d-none d-md-block">
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+            </div> <!-- End Sectorial Corporation page Countries and sectors Selectors -->  
+            <h2>My Values</h2>
+            <form action="">
+              <div class="row countries-sectors countries-sectors">
+                <div class="col-xl-10">
+                  <div class="row values-section">
+                    <!-- Sellector Box -->
+                    <div class="col-md-4 col-sm-6 countries-sectors__vlues">
+                      <div class="all__contries sellect-box">
+                        <div class="search-div mt-4">
+                          <input list="countires" placeholder="Value #1" class="search-country__box">
+                          <datalist id="countires">
+                            <option value="World Wide">
+                            <option value="Saudia Arabia">
+                            <option value="Egypt">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sellector Box -->
+                    <div class="col-md-4 col-sm-6 countries-sectors__vlues">
+                      <div class="all__contries sellect-box">
+                        <div class="search-div mt-4">
+                          <input list="countires" placeholder="Value #2" class="search-country__box">
+                          <datalist id="countires">
+                            <option value="World Wide">
+                            <option value="Saudia Arabia">
+                            <option value="Egypt">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sellector Box -->
+                    <div class="col-md-4 col-sm-6 countries-sectors__vlues">
+                      <div class="all__contries sellect-box">
+                        <div class="search-div mt-4">
+                          <input list="countires" placeholder="Value #3" class="search-country__box">
+                          <datalist id="countires">
+                            <option value="World Wide">
+                            <option value="Saudia Arabia">
+                            <option value="Egypt">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sellector Box -->
+                    <div class="col-md-4 col-sm-6 countries-sectors__vlues">
+                      <div class="all__contries sellect-box">
+                        <div class="search-div mt-4">
+                          <input list="countires" placeholder="Value #4" class="search-country__box">
+                          <datalist id="countires">
+                            <option value="World Wide">
+                            <option value="Saudia Arabia">
+                            <option value="Egypt">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sellector Box -->
+                    <div class="col-md-4 col-sm-6 countries-sectors__vlues">
+                      <div class="all__contries sellect-box">
+                        <div class="search-div mt-4">
+                          <input list="countires" placeholder="Value #5" class="search-country__box">
+                          <datalist id="countires">
+                            <option value="World Wide">
+                            <option value="Saudia Arabia">
+                            <option value="Egypt">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sellector Box -->
+                    <div class="col-md-4 col-sm-6 countries-sectors__vlues">
+                      <div class="all__contries sellect-box">
+                        <div class="search-div mt-4">
+                          <input list="countires" placeholder="Value #6" class="search-country__box">
+                          <datalist id="countires">
+                            <option value="World Wide">
+                            <option value="Saudia Arabia">
+                            <option value="Egypt">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-2 submit-form">
+                  <button type="submit" class="submit mt-4">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div> <!-- End Sectorial Corporation page -->  
+            </form> <!-- End From-->
+            
+            <!-- Start Bench-Marking-values Dashboards -->
+            <div class="row bench-mark-values__compare">
+              <!-- Benchmark-values Prcentage -->
+              <div class="col-xl-3 mt-4">
+                <div id="benchmarking-percentage-values-chart" class="benchmarking-percentage-values-chart bkg-box"></div>
+                <div id="benchmarking-percentage-values-chart-2" class="benchmarking-percentage-values-chart bkg-box mt-4"></div>
+              </div>
+
+              <!-- Benchmark-values & Mix Chart -->
+              <div class="col-xl-9 mt-4">
+                <div id="benchmarking-values-line-mix-chart" class="benchmarking-values-line-mix-chart bkg-box"></div>
+              </div>
+            </div> <!-- Start Bench-Marking-values Dashboards -->
+
+          </div> <!-- End Benchmarking My vlues Page -->
         </div><!-- Dashboard Main Contetnt-->
 
         <!-- Help Icon -->
         <div class="help">
           <div class="help__icon">
             <img src="imgs/help-icon-light.png" alt="help-icon">
+          </div>
+        </div>
+
+        <!-- Terms Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="termsleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                What follows is just some placeholder text for this modal dialog. You just gotta ignite the light and let it shine! Come just as you are to me. Just own the night like the 4th of July. Infect me with your love and fill me with your poison. Come just as you are to me. End of the rainbow looking treasure.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -408,10 +588,10 @@
     <script src="scripts/parameters-chart.js"></script>
     <!-- Columns Chart js-->
     <script src="scripts/columns-chart.js"></script>
-    <!-- Benchmark Percentage js-->
-    <script src="scripts/charts/bm-percent.js"></script>
-    <script src="scripts/charts/bm-percent2.js"></script>
-    <script src="scripts/charts/bm-line-mix-chart.js"></script>
+    <!-- Benchmark page Charts js-->
+    <script src="scripts/charts/bm-page-charts.js"></script>
+    <!-- Benchmarking My Values page Charts js-->
+    <script src="scripts/charts/bm-vaues.charts.js"></script>
     <!-- Main Js -->
     <script src="scripts/main.js"></script>
 
