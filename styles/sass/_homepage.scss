@@ -66,10 +66,7 @@ a, .btn {
     color: var(--prim-main-txt-clr) !important;
     &::before {
         content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include vertical-center;
         background: var(--background-prim-border) !important;
         width: calc(100% + 4px);
         height: calc(100% + 3px);
@@ -79,7 +76,7 @@ a, .btn {
 }
 
 // Reset Shadow
-.btn, .form-control {
+.btn, .form-control, button[type='submit'] {
     outline: 0 !important;
     box-shadow: none !important;
 }
@@ -105,7 +102,7 @@ a, .btn {
     display: none;
 }
 
-.benchmarking-my-values-page {
+.home-page {
     display: block;
 }
 
@@ -158,14 +155,16 @@ a, .btn {
             position: relative;
             .form-control {
                 flex-grow: 1;
-                padding-left: 35px;
+                // @include pad-mar(padding, auto, auto, auto, 35px);
+                // padding-left: 35px;
             }
             .search-icon {
                 background: none;
-                position: absolute;
-                left: 20px;
-                top: 50%;
                 transform: translate(-50%, -50%);
+                @include position(absolute, 50%, auto, auto, 20px);
+                html[dir=rtl] & {
+                    right: 0;
+                }
                 @media screen and (max-width: 575px) {
                     top: 32%;
                 }
@@ -179,13 +178,11 @@ a, .btn {
                 }
                 .user__item {
                     background: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include flex-position(flex, center, center);
                     margin: 0 5px;
                     background-color: var(--bkg-clr-dark-l);
                     border-radius: 5px;
-                    padding: 5px;
+                    // padding: 5px;
                     i {
                         font-size: 18px;
                         border-radius: 5px;
@@ -224,10 +221,15 @@ a, .btn {
                     }
                     &.dropdown {
                         border-radius: 5px;
+                        i {
+                            margin: 0 3px;
+                        }
                         .dropdown-menu {
                             background: var(--bkg-clr-dark-l);
-                            left: auto;
-                            right: 0;
+                            html[dir=ltr] & {
+                                left: auto;
+                                right: 0;
+                            }
                             a {
                                 color: var(--main-txt-clr);
                                 &:hover {
@@ -250,9 +252,7 @@ a, .btn {
             background: var(--prim-bkg-clr-l);
             outline: 0;
             span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-position(flex, center, center);
                 .fa-bars {
                     color: var(--bkg-clr-dark);
                     font-size: 22px;
@@ -265,29 +265,29 @@ a, .btn {
     .dashboard-content {
         display: flex;
         position: relative;
-        @media screen and (max-width: 768px) {
-            padding-left: 0%;
-        }
+        // @media screen and (max-width: 768px) {
+        //     padding-left: 0%;
+        // }
         @media screen and (min-width: 991px) {
-            padding-left: 100px;
+            @include pad-mar(padding, auto, 0, auto, 100px);
         }
         // Side Bar Menu
         .side-bar {
-            position: fixed;
-            top: 74px;
-            left: 0px;
+            @include position(fixed, 76px, auto, auto, 0);
             z-index: 20;
             @media screen and (max-width: 991px) {
                 left: -90px;
+                html[dir=rtl] & {
+                    left: auto;
+                    right: -90px;
+                }
             }
             .side-bar__btn-toggler {
-                position: absolute;
-                top: 20px;
-                right: -30px;
+                @include position(absolute, 20px, -30px, auto, auto);
                 border: none;
                 border-radius: 0;
-                border-top-right-radius: 50px;
-                border-bottom-right-radius: 50px;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
                 background: var(--prim-bkg-clr-l);
                 width: 30px;
                 height: 30px;
@@ -298,6 +298,12 @@ a, .btn {
                 display: none;
                 overflow: hidden;
                 transition: all .3s ease-in-out;
+                html[dir=rtl] & {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-top-left-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                }
                 i {
                     font-size: 20px;
                     font-weight: bold;
@@ -306,15 +312,19 @@ a, .btn {
                     text-align: center;
                     text-shadow: none;
                     transition: all .3s ease-in-out;
+                    html[dir=rtl] & { 
+                        transform: rotate(180deg);
+                    }
                 }
             }
             > div {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                align-items: flex-start;
                 background: var(--background-dark);        
                 width: 90px;
-                height: calc(100vh - 77px);
+                height: calc(100vh - 76px);
                 overflow: hidden;
                 overflow-y: auto;
                 padding: 0 14px;
@@ -351,6 +361,10 @@ a, .btn {
                                 margin-left: 15px;
                                 white-space:nowrap;
                                 font-weight: bold;
+                                html[dir=rtl] & {
+                                    margin-left: 0;
+                                    margin-right: 15px;
+                                }
                             }
                         }
                     }
@@ -365,6 +379,10 @@ a, .btn {
                     text-decoration: none;
                     margin-left: 10px;
                     padding-bottom: 30px;
+                    html[dir=rtl] & {
+                        margin-left: 0;
+                        margin-right: 10px;
+                    }
                     &:hover {
                         color: var(--prim-main-txt-clr);
                     }
@@ -377,6 +395,12 @@ a, .btn {
                         width: 395px;
                         border-top-right-radius: 5px;
                         border-bottom-right-radius: 5px;
+                        html[dir=rtl] & {
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                            border-top-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                        }
                         .side-bar__item {
                             a {
                                 .side-bar__item--text {
@@ -391,9 +415,18 @@ a, .btn {
             }
             &.opened {
                 left: 0;
+                html[dir=rtl] & {
+                    left: auto;
+                    right: 0;
+                }
                 .side-bar__btn-toggler {
                     right: 30px;
                     border-radius: 50%;
+                    html[dir=rtl] & {
+                        right: auto;
+                        left: 30px;
+                        border-radius: 50%;
+                    }
                     .open {
                         display: none;
                     }
@@ -401,6 +434,11 @@ a, .btn {
                         display: block;
                         margin-right: 2px;
                         margin-top: -2px;
+                        html[dir=rtl] & {
+                            margin-top: 1px;
+                            margin-right: 2px;
+                            margin-left: auto;
+                         }
                     }
                 }
                 > div {
@@ -432,6 +470,9 @@ a, .btn {
             }
             // Countries and sectors section
             .countries-sectors {
+                .heading {
+                    justify-content: flex-start;
+                }
                 > div {
                     display: flex;
                     justify-content: space-around;
@@ -468,23 +509,21 @@ a, .btn {
                             i {
                                 color: var(--prim-clr-grad-one);
                                 font-size: 12px;
+                                html[dir='rtl'] & {
+                                    font-family: FontAwesome !important;
+                                    &.fa-angle-left::before {
+                                        content: '\f105' !important;
+                                    }
+                                    &.fa-angle-right::before {
+                                        content: '\f104' !important;
+                                    }
+                                }
                             }
-                            // &.left__arrows {
-                            //     // margin-left: -30px;
-                            //     @media screen and (max-width: 768px) {
-                            //         // margin-left: 12px;
-                            //     }
-                            // }
-                            // &.right__arrows {
-                            //     // left: auto;
-                            //     // right: 0;
-                            //     // margin-right: -38px;
-                            //     @media screen and (max-width: 768px) {
-                            //         // margin-right: -1px;
-                            //     }
-                            // }
                         }
                         .search-div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
                             @media screen and (max-width: 768px) {
                                 width: 100%;
                             }

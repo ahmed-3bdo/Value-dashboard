@@ -1,0 +1,64 @@
+// Position Mixnin
+@mixin position ( $value, $top, $right, $bottom, $left) {
+    position: $value;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+
+    html[dir=rtl] & {
+        right: $left;
+        left: $right;
+    }
+}
+
+// Padding & margin Values For Rtl
+@mixin pad-mar ($prop, $top, $right, $bottom, $left) {
+    // $prop: $top $right $bottom $left;
+    #{$prop}-top: $top;
+    #{$prop}-right: $right; 
+    #{$prop}-bottom: $bottom;
+    #{$prop}-left: $left;
+
+    html[dir=rtl] & {
+        #{$prop}-right: $left; 
+        #{$prop}-left: $right; 
+    }
+}
+
+// Centering mixin
+@mixin vertical-center () {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Flex Position
+@mixin flex-position($prop, $justify, $align) {
+    display: $prop;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+    #{$property}: $ltr-value;
+  
+    [dir=rtl] & {
+      #{$property}: $rtl-value;
+    }
+}
+
+// // abs-position
+// @mixin position($property, $top, $right, $bottom, $left) {
+//     position: #{$property};
+//     top: $top;
+//     right: $right;
+//     bottom: $bottom;
+//     left: $left;
+//     [dir=rtl] & {
+//         right: $left;
+//         left: $right;
+//     }
+// }
+
