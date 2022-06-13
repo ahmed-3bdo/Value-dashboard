@@ -1,0 +1,54 @@
+// Help
+.help {
+    position: absolute;
+    top: auto;
+    right: 40px;
+    bottom: 30px;
+    left: auto;
+    z-index: 20; 
+    row-gap: 10px;
+    .chat__box {
+        height: 500px;
+        width: 320px;
+        background: var(--bkg-clr-dark-l);
+        display: none;
+        // @media screen and (max-width: 768px){
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100vh;
+        //     z-index: 99;
+        // }
+        .chat__header {
+            .chat__header__img {
+                background: var(--bkg-clr-dark-l);
+                width: 60px;
+                height: 60px;
+                @include flex-position (flex, center, center);
+            }
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .chat__message {
+            .chat__message__img {
+                width: 30px;
+            }
+        }
+    }
+    .help__icon {
+        background: var(--bkg-clr-dark-l);
+        padding: 5px;
+        border-radius: 50%;
+        border: 1px solid var(--border-clr);
+        cursor: pointer;
+        img {
+            width: 30px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        right: 10px;
+        bottom: 70px;
+    }
+}

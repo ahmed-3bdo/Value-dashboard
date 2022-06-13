@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir='ltr'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Css Files-->
+    <!-- First Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Jvector Maps -->
+    <link rel="stylesheet" href="styles/jquery-jvectormap-2.0.5.css">  
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Value Dashboard</title>
+</head>
+<body>
+    <!-- Start Dashboard-->
+    <div class="dashboard" id="dashboard">
+      <!-- Navigation bar-->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="imgs/logo-light.png" alt="">
+        </a>
+        <!-- Navigation User Items will be Visible in Mobile Only -->
+        <div class="nav__user nav__user--mobile d-flex d-lg-none">
+          <div class="user__items">
+            <button class="btn user__item sign-button btn-link my-2 my-sm-0" type="submit">Sign In</button>
+            <button class="btn user__item theme-toggler">
+              <i class="fa fa-moon-o moon-icon theme-changer-icon" aria-hidden="true"></i>
+              <i class="fa fa-sun-o sun-icon theme-changer-icon" aria-hidden="true"></i>
+            </button>
+        
+            <button class="btn user__item notification-button">
+              <i class="fa fa-bell-o" aria-hidden="true"></i>
+            </button>
+
+            <div class="dropdown user__item">
+              <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Navigation Toggler Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </span>
+        </button>
+        
+        <!-- Toggler Menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav navbar__nav mr-auto">
+            <li class="nav-item nav__item">
+              <a class="nav-link active" href="#">About</a>
+            </li>
+            <li class="nav-item nav__item">
+              <a class="nav-link" href="#">Services <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item nav__item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item nav__item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+          <!-- Navigation Search Box -->
+          <form class="form-inline my-2 my-lg-0 nav-form nav__form">
+            <input class="form-control mr-sm-2 shadow-none" type="search" placeholder="" aria-label="Search">
+            <button class="btn search-icon my-2 my-sm-0" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+          <!-- Navigation User Items -->
+          <div class="nav__user d-none d-lg-flex">
+            <div class="user__items">
+              <button class="btn user__item sign-button btn-link my-2 my-sm-0" type="submit">Sign In</button>
+              <button class="btn user__item theme-toggler">
+                <i class="fa fa-moon-o moon-icon theme-changer-icon" aria-hidden="true"></i>
+                <i class="fa fa-sun-o sun-icon theme-changer-icon" aria-hidden="true"></i>
+              </button>
+          
+              <button class="btn user__item notification-button">
+                <i class="fa fa-bell-o" aria-hidden="true"></i>
+              </button>
+
+              <div class="dropdown user__item">
+                <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user-o" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Dashboard Content-->
+      <div class="dashboard-content">
+        <!-- Side bar Section -->
+        <div class="side-bar">
+          <!-- Side Bar Toggler Button -->
+          <button type="button" class="btn side-bar__btn-toggler d-block d-lg-none">
+            <i class="fa fa-angle-right open" aria-hidden="true"></i>
+            <i class="fa fa-times close" aria-hidden="true"></i>
+          </button>
+          <!-- Side Bar Menu -->
+          <div>
+            <ul class="side-bar__items list-unstyled">
+              <li class="side-bar__item side__item--menu">
+                <a href="index.html" class="page-section-link" data-class=".home-page">
+                  <img src="imgs/home.png" class="side-bar__item--icon" alt="home">
+                  <span class="side-bar__item--text" >Home</span>
+                </a>
+              </li>
+              <li class="side-bar__item side__item--menu">
+                <a href="#" class="page-section-link" data-class=".worldwide-page">
+                  <img src="imgs/world-wide.png" class="side-bar__item--icon" alt="home">
+                  <span class="side-bar__item--text">Worldwide Corporate Core Values</span>
+                </a>
+              </li>
+              <li class="side-bar__item side__item--menu">
+                <a href="#" class="page-section-link" data-class=".corporate-value-page">
+                  <img src="imgs/corporate-values.png" class="side-bar__item--icon" alt="home">
+                  <span class="side-bar__item--text">Corporate Values Profiling by Country</span>
+                </a>
+              </li>
+              <li class="side-bar__item side__item--menu">
+                <a href="#" class="page-section-link" data-class=".worldwide-cor-page">
+                  <img src="imgs/sector.png" class="side-bar__item--icon" alt="home">
+                  <span class="side-bar__item--text">Worldwide Corporate Values by Sector</span>
+                </a>
+              </li>
+              <li class="side-bar__item side__item--menu">
+                <a href="#" class="page-section-link" data-class=".benchmarking-my-values-page">
+                  <img src="imgs/sectoral.png" class="side-bar__item--icon" alt="home">
+                  <span class="side-bar__item--text">Sectoral Corporate Values by Country</span>
+                </a>
+              </li>
+              <li class="side-bar__item side__item--menu terms">
+                <a href="#" class="page-section-link"data-class=".benchmark-page" >
+                  <img src="imgs/benchmark.png" class="side-bar__item--icon" alt="home">
+                  <span class="side-bar__item--text">Benchmarking Corporate Values</span>
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <a class="terms" href="#" data-toggle="modal" data-target="#termsleModal">
+              <span class="terms side-bar__item--text">Terms</span>
+            </a>
+          </div>
+        </div> <!-- End Side Bar-->
+
+        <!-- Dashboard Main Contetnt-->
+        <div class="dashboard__main-content">
+
+          <!-- About Page -->
+          <div id="about-page" class="container-fluid about-page py-4">
+            <p class="lead">Arrowad Value Research Work was initiated first in January 2015 by Arrowad Group and after then gradually we have improved our data collection, its processes and analysis</p>
+            <div class="prime-objectives">
+              <h2 class="mt-4">The prime objectives of this Research Work are:</h2>
+              <ul>
+                <li>Exploring the sense of values</li>
+                <li>Understanding the on-going practice-trends</li>
+                <li>Identifying the sectoral focus on values</li>
+                <li>Finding a linkage on values for the top organizations in the world</li>
+                <li>Discovering the solid-ground competition by companies maintaining values</li>
+                <li>Tracking a connectivity on World Economy and Value Practitioners' Performance</li>
+              </ul>
+            </div>
+            <div class="sampling-resources">
+              <h2 class="mt-4">Sampling Source</h2>
+              <p class="lead">Between the year 2000 and till dated, based on World Famous Journals like FORBES Magazine, Business Week, The Economist; Research Groups, Corporate Critics Panel, Business Think Tanks, Business Reviews, Organizational Excellence Observers, we have gathered more than 3792 Companies/Organizations who are performing brilliantly during the mentioned period; also importantly, these organizations have already drawn up their remarkable benchmark in the world of business and services.</p>
+            </div>
+            <div class="sampling-process">
+              <h2 class="mt-4">Sampling Process</h2>
+              <ol>
+                  <li>Identifying the best possible sources for the names of the organizations, involving sector and country of origin</li>
+                  <li>Cross checking the sources' information on the names of the organizations, involving sector and country of origin</li>
+                  <li>Collection of 3792 names of the organizations, involving sector and country of origin</li>
+                  <li>Further cross checking the data of 3792 names of the organizations, involving sector and country of origin</li>
+                  <li>We did sample of 500 names of the organizations, involving sector and country of origin as every phase as Primary Research Work</li>
+                  <li>Then we repeat the phases till we reach our last update as shown</li>
+                  <li>Rather simply copying pasting, the Values, we tried to have insight into the titled values of the organization; as a result, we often found more involvement of the values, even though, the organization might just have titled as one; sometimes, we found the organization makes it complicated for the information seekers to access information regarding organizational values</li>
+                  <li>We tried to maintain the same facts and figures while collecting and storing data from any company website or relevant sources</li>
+                  <li>Sometimes, we found organizations used Metaphors or Phrasal expressing in defining their values; in that case, we had to review time to time, their text, and came up with an expert identification of the theme-value</li>
+                  <li>Amalgamated all phases' data</li>
+                  <li>Updating the value vibes by sector</li>
+                  <li>Identifying the top practicing values by various organizations</li>
+                  <li>Identifying the values on practice by sector</li>
+                  <li>Producing a list of Prime Core Values by sector as expected and/ or as expert thoughts</li>
+                  <li>Comparing the value vibes by sector with the Prime Core Value list</li>
+                  <li>Analyzing the fact and finding out the reasons of ongoing trend by sector</li>
+                  <li>Preparing the Final Comprehensive Report</li>
+                  <li>Conducting Final review</li>
+                  <li>Incorporating data and processing for visualization</li>
+                  <li>Making live the data for public</li>
+                </ol>
+            </div>
+          </div>
+
+        </div><!-- Dashboard Main Contetnt-->
+
+        <!-- Help Icon -->
+        <div class="help">
+          <div class="help__icon">
+            <img src="imgs/help-icon-light.png" alt="help-icon">
+          </div>
+        </div>
+
+        <!-- Terms Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="termsleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h3>Defining the terms:</h3>
+                  <!-- Terms box-1 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">Date of Sampling</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">when the sampling was conducted and last updated</p>
+                    </div>
+                  </div>
+                  <!-- Terms box-2 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">Sampling Size (Number of Companies)</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">number of companies that we sampled for this research work</p>
+                    </div>
+                  </div>
+                  <!-- Terms box-3 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">Number of Countries (Number)</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">number of companies that we sampled for this research work belonging in how many countries</p>
+                    </div>
+                  </div>
+                  <!-- Terms box-4 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">Number of Sectors (Number)</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">number of companies that we sampled for this research work belonging in how many sectors</p>
+                    </div>
+                  </div>
+                  <!-- Terms box-5 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">Published Values in Website (Number</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">total number of values published by the number ofsampled</p>
+                    </div>
+                  </div>
+                  <!-- Terms box-6 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">No Published Values in Website (Number)</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">number of sampled companies who have no published values in their websites</p>
+                    </div>
+                  </div>
+                  <!-- Terms box-7 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">Worldwide Common Values (total identified values)</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">from the common core filtering process,the number of common values from the total sampled companies</p>
+                    </div>
+                  </div>
+                  <!-- Terms box-8 -->
+                  <div class="terms__box bkg-box mt-3 mb-3">
+                    <div class="title__box p-4 d-flex justify-content-between">
+                      <span class="text">Worldwide Top 10 Values</span>
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="slide__box">
+                        <p class="p-4 mb-0">based on the available data, arranging the rank of values</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      </div><!-- End Dashboard Content -->
+    </div>
+    <!-- End Dashboard -->
+
+    <!-- Javascript Files-->
+    <!-- Bootstrap Files-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Main Js -->
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>

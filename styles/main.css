@@ -1,4 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+.help {
+  position: absolute;
+  top: auto;
+  right: 40px;
+  bottom: 30px;
+  left: auto;
+  z-index: 20;
+  row-gap: 10px;
+}
+
+.help .chat__box {
+  height: 500px;
+  width: 320px;
+  background: var(--bkg-clr-dark-l);
+  display: none;
+}
+
+.help .chat__box .chat__header {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.help .chat__box .chat__header .chat__header__img {
+  background: var(--bkg-clr-dark-l);
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.help .chat__box .chat__message .chat__message__img {
+  width: 30px;
+}
+
+.help .help__icon {
+  background: var(--bkg-clr-dark-l);
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid var(--border-clr);
+  cursor: pointer;
+}
+
+.help .help__icon img {
+  width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .help {
+    right: 10px;
+    bottom: 70px;
+  }
+}
+
+#about-page p.lead {
+  font-size: 17px;
+}
+
+@media screen and (min-width: 991px) {
+  #about-page p.lead {
+    width: 90%;
+  }
+}
+
+#about-page ul li, #about-page ol li {
+  font-size: 17px;
+}
+
+#about-page h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
 :root {
   --bkg-clr-dark: rgb(0, 3, 32);
   --bkg-clr-dark-transparent: 0, 3, 32;
@@ -33,11 +112,28 @@ a:hover, .btn:hover {
   color: var(--prim-main-txt-clr) !important;
 }
 
+a.active, .btn.active {
+  color: var(--prim-main-txt-clr) !important;
+}
+
 .btn {
   background: var(--background-dark);
   padding: 5px !important;
   border-radius: 5px;
   outline: 0 !important;
+}
+
+button.close {
+  opacity: 1;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  color: var(--white);
+  outline: 0;
+}
+
+button.close:hover {
+  color: var(--white);
+  opacity: 1;
 }
 
 .bkg-box,
@@ -89,6 +185,7 @@ a:hover, .btn:hover {
 
 .page-section {
   display: none;
+  height: 100vh;
 }
 
 .home-page {
@@ -845,43 +942,39 @@ html[dir='rtl'] #dashboard .dashboard-content .dashboard__main-content .countrie
   height: 400px;
 }
 
-#dashboard .dashboard-content .help {
-  position: absolute;
-  top: auto;
-  right: 40px;
-  bottom: 30px;
-  left: auto;
-}
-
-#dashboard .dashboard-content .help .help__icon {
-  background: var(--bkg-clr-dark-l);
-  padding: 5px;
-  border-radius: 50%;
-  border: 1px solid var(--border-clr);
-  cursor: pointer;
-}
-
-#dashboard .dashboard-content .help .help__icon img {
-  width: 30px;
-}
-
-@media screen and (max-width: 768px) {
-  #dashboard .dashboard-content .help {
-    right: 10px;
-    bottom: 70px;
-  }
-}
-
 #dashboard .dashboard-content #termsleModal .modal-dialog .modal-content {
   background-color: var(--bkg-clr-dark-l);
 }
 
-#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-header .close {
-  opacity: 1;
-  -webkit-box-shadow: 0;
-          box-shadow: 0;
-  color: var(--white);
-  outline: 0;
+#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box .title__box {
+  cursor: pointer;
+  border: 1px solid var(--bkg-clr-dark);
+  border-radius: 5px;
+}
+
+#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box .title__box i {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box .slide__box {
+  display: none;
+  background: var(--bkg-clr-dark-l);
+  border: 1px solid var(--bkg-clr-dark);
+  border-top-width: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box.opened .title__box {
+  border-bottom: 1px solid var(--bkg-clr-dark);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box.opened .title__box i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 @media screen and (min-width: 991px) {

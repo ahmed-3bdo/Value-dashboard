@@ -1,0 +1,15 @@
+#about-page {
+    p.lead {
+        font-size: 17px;
+        @media screen and (min-width: 991px) {
+            width: 90%
+        }
+    }
+    ul li, ol li {
+        font-size: 17px
+    }
+    h2 {
+        font-size: 28px;
+        font-weight: bold
+    }
+}

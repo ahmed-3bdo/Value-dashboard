@@ -25,4 +25,15 @@ $('.page-section-link').on('click', function () {
   if ($(window).width() < 768) {
     $('.side-bar').removeClass('opened');
   }
+});
+
+// Terms
+$('.terms__box .title__box').on('click', function () {
+  $(this).parent().toggleClass('opened');
+  $(this).next().slideToggle();
+})
+
+// Caht-box
+$("#help").on('click', function () {
+  $('.chat__box').slideToggle(200);
 })
