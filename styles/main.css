@@ -160,6 +160,41 @@ html[dir=rtl] .chat__box .chat__box__content .chat__message.right__message .chat
   cursor: pointer;
 }
 
+#termsleModal .modal-dialog .modal-content {
+  background-color: var(--bkg-clr-dark-l);
+}
+
+#termsleModal .modal-dialog .modal-content .modal-body .terms__box .title__box {
+  cursor: pointer;
+  border: 1px solid var(--bkg-clr-dark);
+  border-radius: 5px;
+}
+
+#termsleModal .modal-dialog .modal-content .modal-body .terms__box .title__box i {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#termsleModal .modal-dialog .modal-content .modal-body .terms__box .slide__box {
+  display: none;
+  background: var(--bkg-clr-dark-l);
+  border: 1px solid var(--bkg-clr-dark);
+  border-top-width: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#termsleModal .modal-dialog .modal-content .modal-body .terms__box.opened .title__box {
+  border-bottom: 1px solid var(--bkg-clr-dark);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#termsleModal .modal-dialog .modal-content .modal-body .terms__box.opened .title__box i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 /*** Footer ***/
 footer {
   -ms-flex-wrap: wrap;
@@ -301,12 +336,7 @@ button.close:hover {
 }
 
 .page-section {
-  display: none;
   height: 100vh;
-}
-
-.home-page {
-  display: block;
 }
 
 ::-webkit-scrollbar {
@@ -1057,41 +1087,6 @@ html[dir='rtl'] #dashboard .dashboard-content .dashboard__main-content .countrie
 #dashboard .dashboard-content .world-map__section #world-map {
   width: 100%;
   height: 400px;
-}
-
-#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content {
-  background-color: var(--bkg-clr-dark-l);
-}
-
-#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box .title__box {
-  cursor: pointer;
-  border: 1px solid var(--bkg-clr-dark);
-  border-radius: 5px;
-}
-
-#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box .title__box i {
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box .slide__box {
-  display: none;
-  background: var(--bkg-clr-dark-l);
-  border: 1px solid var(--bkg-clr-dark);
-  border-top-width: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box.opened .title__box {
-  border-bottom: 1px solid var(--bkg-clr-dark);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-#dashboard .dashboard-content #termsleModal .modal-dialog .modal-content .modal-body .terms__box.opened .title__box i {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
 }
 
 @media screen and (min-width: 991px) {

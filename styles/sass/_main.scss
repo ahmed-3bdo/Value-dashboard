@@ -67,10 +67,10 @@ button.close {
 
 // Front Boxes Style and background
 .bkg-box,
-#world-map .jvectormap-container,{
+#world-map .jvectormap-container {
     background: var(--bkg-clr-box-dark) !important;
     border-radius: 5px;
-}
+}    
 
 // Boxes With Gradient Border
 .gradient-border {
@@ -112,14 +112,8 @@ button.close {
 
 // hide pages
 .page-section {
-    display: none;
     height: 100vh;
 }
-
-.home-page {
-    display: block;
-}
-
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -654,47 +648,6 @@ button.close {
             #world-map {
                 width: 100%;
                 height: 400px;
-            }
-        }
-
-
-        // Terms Modal
-        #termsleModal {
-            .modal-dialog {
-                .modal-content {
-                    background-color: var(--bkg-clr-dark-l);
-                    .modal-body {
-                        .terms__box {
-                            .title__box {
-                                cursor: pointer;
-                                border: 1px solid var(--bkg-clr-dark);
-                                border-radius: 5px;
-                                i {
-                                    transition: all .3s ease-in-out 
-                                }
-                            }
-                            .slide__box {
-                                display: none;
-                                background: var(--bkg-clr-dark-l);
-                                border: 1px solid var(--bkg-clr-dark);
-                                border-top-width: 0;
-                                border-bottom-left-radius: 5px;
-                                border-bottom-right-radius: 5px;
-                            }
-
-                            &.opened {
-                                .title__box {
-                                    border-bottom: 1px solid var(--bkg-clr-dark);
-                                    border-bottom-left-radius: 0;
-                                    border-bottom-right-radius: 0;
-                                    i {
-                                        transform: rotate(-180deg);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
  

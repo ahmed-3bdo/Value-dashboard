@@ -145,7 +145,7 @@
           <div>
             <ul class="side-bar__items list-unstyled">
               <li class="side-bar__item side__item--menu">
-                <a href="index.html" class="page-section-link active" data-class=".home-page">
+                <a href="index.html" class="page-section-link" data-class=".home-page">
                   <img src="imgs/home.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text" >Home</span>
                 </a>
@@ -163,13 +163,13 @@
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="benchmark.html" class="page-section-link" data-class=".worldwide-cor-page">
+                <a href="#" class="page-section-link" data-class=".worldwide-cor-page">
                   <img src="imgs/sector.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Worldwide Corporate Values by Sector</span>
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="benchmark.html" class="page-section-link" data-class=".benchmarking-my-values-page">
+                <a href="benchmark.html" class="page-section-link active" data-class=".benchmarking-my-values-page">
                   <img src="imgs/sectoral.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Sectoral Corporate Values by Country</span>
                 </a>
@@ -190,21 +190,20 @@
 
         <!-- Dashboard Main Contetnt-->
         <div class="dashboard__main-content">
-          <!-- Home Page -->
-          <div id="home-page" class="container-fluid page-section home-page">
+
+          <!-- Benchmark Page -->
+          <div id="benchmark-page" class="container-fluid page-section benchmark-page">
             <!-- Countries and sectors box -->
+            <!-- Sellector Box -->
             <div class="row countries-sectors">
               <div class="col-xl countries-sectors__countries">
-                <button type="button" class="btn prev__country prev-next__btn gradient-border d-none d-md-block">
-                  Saudia Arabia
-                </button>
                 <div class="all__contries sellect-box">
-                  <div class="left__arrows arrows d-none d-md-block">
+                  <div class="left__arrows arrows arrows-rest-pages d-none d-md-block">
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                   </div>
                   <div class="search-div">
-                    <label class="label d-block d-md-none">Select Country</label>
+                    <label class="label d-block">Select Country</label>
                     <input list="countires" placeholder="World Wide" class="search-country__box">
                     <datalist id="countires">
                       <option value="World Wide">
@@ -212,26 +211,43 @@
                       <option value="Egypt">
                     </datalist>
                   </div>
-                  <div class="right__arrows arrows d-none d-md-block">
+                  <div class="right__arrows arrows arrows-rest-pages d-none d-md-block">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                   </div>
                 </div>
-                <button type="button" class="btn next__country prev-next__btn gradient-border d-none d-md-block">
-                  Egypt
-                </button>
               </div>
-              <div class="col-xl countries-sectors__sectors">
-                <button type="button" class="btn prev__sectors prev-next__btn gradient-border d-none d-md-block">
-                  Education
-                </button>
-                <div class="all__sectors sellect-box">
-                  <div class="left__arrows arrows d-none d-md-block">
+              <!-- Sellector Box -->
+              <div class="col-xl countries-sectors__countries">
+                <div class="all__contries sellect-box">
+                  <div class="left__arrows arrows arrows-rest-pages d-none d-md-block">
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                   </div>
                   <div class="search-div">
-                    <label class="label d-block d-md-none">Select Sector</label>
+                    <label class="label d-block">Select Country</label>
+                    <input list="countires" placeholder="World Wide" class="search-country__box">
+                    <datalist id="countires">
+                      <option value="World Wide">
+                      <option value="Saudia Arabia">
+                      <option value="Egypt">
+                    </datalist>
+                  </div>
+                  <div class="right__arrows arrows arrows-rest-pages d-none d-md-block">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Sellector Box -->
+              <div class="col-xl countries-sectors__sectors">
+                <div class="all__sectors sellect-box">
+                  <div class="left__arrows arrows arrows-rest-pages d-none d-md-block">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="search-div">
+                    <label class="label d-block ">Select Sector</label>
                     <input list="sectors" placeholder="World Wide" class="search-country__box">
                     <datalist id="sectors">
                       <option value="World Wide">
@@ -239,99 +255,29 @@
                       <option value="Finincial">
                     </datalist>
                   </div>
-                  <div class="right__arrows arrows d-none d-md-block">
+                  <div class="right__arrows arrows arrows-rest-pages d-none d-md-block">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                   </div>
                 </div>
-                <button type="button" class="btn next__sectors prev-next__btn gradient-border d-none d-md-block">
-                  Finincial
-                </button>
               </div>
-            </div>
+            </div> <!-- End Bench-Mark Countries and sectors Selectors -->
+            
+            <!-- Start Bench-Mark Dashboards -->
+            <div class="row bench-mark__compare">
+              <!-- Benchmark Prcentage -->
+              <div class="col-xl-3 mt-4">
+                <div id="benchmark-percentage-chart" class="benchmark-percentage-chart bkg-box"></div>
+                <div id="benchmark-percentage-chart-2" class="benchmark-percentage-chart bkg-box mt-4"></div>
+              </div>
 
-            <!-- Parameters Section -->
-            <div class="row parameters-text gradient-border light-background">
-              <!-- parameter -->
-              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                <img src="imgs/country-numbers.png" class="parameter__icon" alt="parameter-icon"/>
-                <h3>Number of Countries </h3>
-                  <p>204</p>
+              <!-- Benchmark Line & Mix Chart -->
+              <div class="col-xl-9 mt-4">
+                <div id="benchmark-line-mix-chart" class="benchmark-line-mix-chart bkg-box"></div>
               </div>
-              <!-- parameter -->
-              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                <img src="imgs/sector-numbers.png" class="parameter__icon" alt="parameter-icon"/>
-                <h3>Number of Sectors </h3>
-                  <p>13</p>
-              </div>
-              <!-- parameter -->
-              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                <img src="imgs/sampling.png" class="parameter__icon gradient-border" alt="parameter-icon"/>
-                <h3>Sampling Size: (Co.)</h3>
-                  <p>7004</p>
-              </div>
-              <!-- parameter -->
-              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                <img src="imgs/without-values.png" class="parameter__icon" alt="parameter-icon"/>
-                <h3>With Values: (Co.)</h3>
-                  <p>4175</p>
-              </div>
-              <!-- parameter -->
-              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                <img src="imgs/with-values.png" class="parameter__icon" alt="parameter-icon"/>
-                <h3>Without Values: (Co.)</h3>
-                  <p>2905</p>
-              </div>
-              <!-- parameter -->
-              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 parameter">
-                <img src="imgs/common-values.png" class="parameter__icon" alt="parameter-icon"/>
-                <h3>Common Values </h3>
-                  <p>1977</p>
-              </div>
-            </div>
-            <div class="row">
-              <!-- Parameters Cahrt Section -->
-              <div class="col-xl-4 mt-4">
-                <div id="parameters-chart" class="parameters-chart bkg-box"></div>
-              </div>
-              <!-- Columns Chart Section -->
-              <div class="col-xl-8 mt-4">
-                <div id="columns-chart" class="columns-chart bkg-box">
-                </div>
-              </div>
-            </div>
-            <!-- Map Chart Section -->
-            <div class="row mt-4">
-              <div class="col-12 world-map__section">
-                <div class="keymap__box">
-                  <div class="keymap__icon">
-                    <i class="fa fa-key" aria-hidden="true"></i>
-                  </div>
-                  <div class="keymap__content">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1">
-                          Key1
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                          Key 2
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
-                        <label class="form-check-label" for="exampleRadios3">
-                          Key 3
-                        </label>
-                      </div> 
-                  </div>
-                </div>
-                <div id="world-map" class="world-map bkg-box"></div>
-              </div>
-            </div>
+            </div> <!-- End Benchmark Dashboard -->
 
+            <!-- Footer -->
             <footer class="footer mt-4 p-4 bkg-box d-flex justify-content-between align-items-center">
               <div class="copy-right d-flex flex-column align-items-start">
                 <span class="copy-right__text">Powerd by AITSP</span>
@@ -355,9 +301,7 @@
                 </li>
               </ul>
             </footer>
-          </div>
-
-        </div><!-- Dashboard Main Contetnt-->
+          </div><!-- End Benchmark page-->
 
         <!-- Help Icon -->
         <div id="help" class="help d-flex flex-column align-items-end">
