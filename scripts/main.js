@@ -8,8 +8,10 @@ $('.theme-toggler').on('click', function() {
     // Check if theme light && change help icon color
     if ($(':root').hasClass('light-theme')) {
       $('.help__icon img').attr('src', 'imgs/help-icon-dark.png')
+      $('.chat__box img').attr('src', 'imgs/help-icon-dark.png')
     } else {
       $('.help__icon img').attr('src', 'imgs/help-icon-light.png')
+      $('.chat__box img').attr('src', 'imgs/help-icon-dark.png')
     }
 });
 // Keymap Content Toggler
@@ -34,6 +36,6 @@ $('.terms__box .title__box').on('click', function () {
 })
 
 // Caht-box
-$("#help").on('click', function () {
+$("#help__icon, .chat__header__close").on('click', function () {
   $('.chat__box').slideToggle(200);
 })

@@ -4,7 +4,7 @@
         --bkg-clr-dark-transparent: 0, 3, 32;
         --bkg-clr-dark-l: rgb(0, 39, 109);
         --bkg-clr-dark-l-transparent: 0, 39, 109;
-        --bkg-clr-box-dark: rgb(0, 3, 32, .4);
+        --bkg-clr-box-dark: rgb(0, 3, 32, .6);
 
         // bkg-prim & prim-lighter
         --prim-bkg-clr: rgb(0, 150, 171);
@@ -753,6 +753,7 @@ button.close {
         --prim-bkg-clr-l: rgb(0, 212, 205);
         // Light Text Colors
         --main-txt-clr: rgb(0, 3, 32);
+        --white: rgb(0, 3, 32);
         --sec-txt-clr: rgb(180, 180, 180);
         // Special Text-Colors
         --prim-main-txt-clr: rgb(0, 192, 186);
@@ -803,6 +804,13 @@ button.close {
             .keymap__icon {
                 background: var(--background-dark);
             }
+        }
+    }
+    
+    .chat__box { 
+        background: var(--bkg-clr-dark);
+        .question {
+            background: var(--bkg-clr-dark) !important;
         }
     }
 }

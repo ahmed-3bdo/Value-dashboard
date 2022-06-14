@@ -308,12 +308,53 @@
                     <i class="fa fa-key" aria-hidden="true"></i>
                   </div>
                   <div class="keymap__content">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores blanditiis quaerat natus debitis ipsa, nobis nihil vel veniam error ut quo alias eveniet doloremque, dolore dolor voluptatem, rem illum deserunt.
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Key1
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Key 2
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                        <label class="form-check-label" for="exampleRadios3">
+                          Key 3
+                        </label>
+                      </div> 
                   </div>
                 </div>
                 <div id="world-map" class="world-map bkg-box"></div>
               </div>
             </div>
+
+            <footer class="footer mt-4 p-4 bkg-box d-flex justify-content-between align-items-center">
+              <div class="copy-right d-flex flex-column align-items-start">
+                <span class="copy-right__text">Made by DV.AITSP</span>
+                <span class="copy-right__text">All Copyright &copy; Reserved</span>
+              </div>
+              <ul class="social-media list-unstyled d-flex align-items-center mb-0">
+                <li>
+                  <a href="#" class="p-1 mx-2">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="p-1 mx-2">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="p-1 mx-2">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </footer>
           </div>
 
           <!-- Benchmark Page -->
@@ -569,42 +610,67 @@
 
         <!-- Help Icon -->
         <div id="help" class="help d-flex flex-column align-items-end">
+          <!-- Help Icon -->
+          <div id="help__icon" class="help__icon">
+            <img src="imgs/help-icon-light.png" alt="help-icon">
+          </div>
+        </div>
 
           <!-- Chat Box -->
           <div class="chat__box rounded">
 
-            <!-- Chat box header -->
-            <div class="media chat__header align-items-center sticky-top d-flex bkg-box py-2 px-4">
-              <div class="chat__header__img p-2 rounded-circle mr-3">
-                <img src="imgs/help-icon-light.png" class="align-self-center img-fluid" alt="chat icon">
+              <!-- Chat box header -->
+              <div class="media chat__header align-items-center sticky-top d-flex py-2 px-4">
+                <div class="chat__header__img p-2 rounded-circle mr-3">
+                  <img src="imgs/help-icon-light.png" class="align-self-center img-fluid" alt="chat icon">
+                </div>
+                <div class="chat__header__body d-flex flex-column align-items-start media-body">
+                  <h5 class="mt-0 mb-0">Chat with us!</h5>
+                  <p class="mb-0">online</p>
+                </div>
+                <button type="button" class="close chat__header__close align-self-start" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-              <div class="chat__header__body media-body">
-                <h5 class="mt-0 mb-0">Chat with us!</h5>
-                <p class="mb-0">online</p>
-              </div>
-              <button type="button" class="close chat__header__close align-self-start" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <!-- Chat Quistions -->
-            <div class="chat__message media p-2">
-              <div class="chat__message__img mr-3">
-                  <img src="imgs/help-icon-light.png" class="align-self-center img-fluid" alt="Message icon">
-                  <div class="media-body chat__message__body">
-                    <div class="message">text</div>
-                    <div class="message__time">01:00</div>
+  
+              <div class="chat__box__content">
+                <!-- Chat Message Right -->
+                <div class="chat__message media p-2 right__message">
+                  <div class="chat__message__img align-self-end mr-2 mb-4">
                   </div>
+                  <div class="media-body chat__message__body">
+                    <div class="message bkg-box mb-1 p-3"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate amet doloribus natus quod mollitia, suscipit consequuntur nihil tempora, accusantium</div>
+                    <div class="message__time">
+                      <span class="time">01:00</span>
+                      <span class="day-night">AM</span>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Chat Message Bot -->
+                <div class="chat__message media p-2 left__message chat__bot">
+                  <div class="chat__message__img align-self-end mr-2 mb-4">
+                    <img src="imgs/help-icon-light.png" class="align-self-center img-fluid" alt="Message icon">
+                  </div>
+                  <div class="media-body chat__message__body">
+                    <div class="message bkg-box mb-1 p-3"> 
+                      <div class="chat-ques d-flex flex-column ">
+                        <p class="mb-1">Choose Question</p>
+                        <span class="question bkg-box p-2 my-1">How Are You?</span>
+                        <span class="question bkg-box p-2 my-1">How Old Are You?</span>
+                        <span class="question bkg-box p-2 my-1">How Do You Do?</span>
+                      </div>
+                    </div>
+                    <div class="message__time">
+                      <span class="time">01:00</span>
+                      <span class="day-night">AM</span>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
-
+  
             </div>
-          </div>
-
-          <!-- Help Icon -->
-          <div class="help__icon">
-            <img src="imgs/help-icon-light.png" alt="help-icon">
-          </div>
-        </div>
 
         <!-- Terms Modal -->
         <!-- Modal -->

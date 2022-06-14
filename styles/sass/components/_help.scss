@@ -1,41 +1,14 @@
 // Help
 .help {
     position: absolute;
-    top: auto;
     right: 40px;
     bottom: 30px;
     left: auto;
     z-index: 20; 
     row-gap: 10px;
-    .chat__box {
-        height: 500px;
-        width: 320px;
-        background: var(--bkg-clr-dark-l);
-        display: none;
-        // @media screen and (max-width: 768px){
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100vh;
-        //     z-index: 99;
-        // }
-        .chat__header {
-            .chat__header__img {
-                background: var(--bkg-clr-dark-l);
-                width: 60px;
-                height: 60px;
-                @include flex-position (flex, center, center);
-            }
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        .chat__message {
-            .chat__message__img {
-                width: 30px;
-            }
-        }
+    html[dir=rtl] & {
+        right: auto;
+        left: 40px;
     }
     .help__icon {
         background: var(--bkg-clr-dark-l);
@@ -50,5 +23,116 @@
     @media screen and (max-width: 768px) {
         right: 10px;
         bottom: 70px;
+        html[dir=rtl] & {
+            right: auto;
+            left: 10px;
+        }
     }
+}
+
+.chat__box {
+    position: absolute;
+    right: 40px;
+    bottom: 75px;
+    height: 500px;
+    width: 320px;
+    background: var(--bkg-clr-dark-l);
+    border: 1px solid var(--border-clr);
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+    html[dir=rtl] & {
+        right: auto;
+        left: 40px;
+    }
+    @media screen and (max-width: 768px){
+        top: -80px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        html[dir=rtl] & {
+            left: auto;
+            right: 0;
+        }
+    }
+    .chat__header {
+        background: var(--bkg-clr-dark-l);
+        box-shadow: 0 0 11px -3px var(--bkg-clr-dark);
+        // border-bottom: 1px solid var(--border-clr);
+        .chat__header__img {
+            background: var(--bkg-clr-dark);
+            width: 60px;
+            height: 60px;
+            @include flex-position (flex, center, center);
+            html[dir=rtl] & {
+                margin-right: 0 !important; 
+                margin-left: 1.5rem !important; 
+            }
+            &::before {
+                content: "";
+                @include vertical-center;
+                top: 55px;
+                left: 81px;
+                background: var(--success);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                html[dir=rtl] & {
+                    left: auto;
+                    right: 71px;
+                }
+            }
+        }
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .chat__box__content {
+        overflow-y: auto;
+        height: 100%;
+        padding-bottom: 80px;
+        .chat__message {
+            .chat__message__img {
+                width: 30px;
+            }
+            .chat__message__body {
+                .message {
+                    border-radius: 10px;
+                    border-bottom-left-radius: 0 !important;
+                    font-size: 14px;
+                    text-align: start
+                }
+                .message__time {
+                    font-size: 10px;
+                    color: var(--main-txt-clr)
+                }
+            }
+            &.right__message {
+                .chat__message__img {
+                    width: 30px;
+                    html[dir=rtl] & {
+                        margin-right: 1rem !important; 
+                        margin-left: 0 !important;
+                    }
+                }
+                .message {
+                    border-bottom-left-radius: 10px !important;
+                    border-bottom-right-radius: 0 !important;
+                    text-align: end;
+                }
+                .message__time {
+                    text-align: end;
+                }
+            }
+            &.chat__bot {
+                .chat-ques {
+                    .question {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+
+
 }

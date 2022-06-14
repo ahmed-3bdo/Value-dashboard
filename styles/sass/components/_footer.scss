@@ -1,0 +1,13 @@
+/*** Footer ***/
+footer {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    .social-media {
+        padding-inline-end: 20px;
+        li {
+            a {
+                padding: 20px;
+            }
+        }
+    }
+}
