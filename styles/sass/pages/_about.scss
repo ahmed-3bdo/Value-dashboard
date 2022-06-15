@@ -8,6 +8,14 @@
     ul li, ol li {
         font-size: 17px
     }
+    ul.bulits-list {
+        a {
+            color: var(--prim-main-txt-clr);
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
     h2 {
         font-size: 28px;
         font-weight: bold
