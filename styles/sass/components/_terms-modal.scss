@@ -27,8 +27,13 @@
                             border-bottom: 1px solid var(--bkg-clr-dark);
                             border-bottom-left-radius: 0;
                             border-bottom-right-radius: 0;
+                            background: var(--prim-bkg-clr);
+                            span {
+                                color: var(--bkg-clr-dark);
+                            }
                             i {
                                 transform: rotate(-180deg);
+                                color: var(--bkg-clr-dark);
                             }
                         }
                     }

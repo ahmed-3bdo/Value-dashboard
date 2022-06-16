@@ -519,7 +519,7 @@ button.close {
                     .form-check {
                         text-align: start;
                         .form-check-label {
-                            html[dir="rtl"] {
+                            html[dir="rtl"] & {
                                 margin-inline-start: 20px;
                             }
                         }
@@ -637,6 +637,9 @@ button.close {
         .keymap__box {
             .keymap__icon {
                 background: var(--background-dark);
+            }
+            .keymap__content {
+                background: var(--background-dark) !important;
             }
         }
     }

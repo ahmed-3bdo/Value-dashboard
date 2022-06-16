@@ -5,6 +5,10 @@
     .navbar-brand {
         img {
             max-width: 50px;
+            margin-inline-start: 3px;
+            html[dir="rtl"] & {
+                margin-inline-start: -9px;
+            }
         }
         @media screen and (max-width: 768px) {
             margin-right: 0;
@@ -92,8 +96,10 @@
                 }
                 &.dropdown {
                     border-radius: 5px;
-                    i {
-                        margin: 0 3px;
+                    .dropdown-toggle {
+                        &::after {
+                            margin-inline-start: 3px;
+                        }
                     }
                     .dropdown-menu {
                         background: var(--bkg-clr-dark-l);
@@ -118,6 +124,27 @@
                 // &.active {
                     
                 // }
+            }
+            .select-group {
+                width: 50px !important;
+                .select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;       /* Remove default arrow */
+                    background-image: url(...);   /* Add custom arrow */
+                    // background: var(--bkg-clr-dark-l);
+                    // color: var(--main-txt-clr);
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: 14px;
+                        right: 10px;
+                        width: 0;
+                        height: 0;
+                        border: 6px solid transparent;
+                        border-color: #fff transparent transparent transparent;
+                    }
+                }
             }
         }
     }

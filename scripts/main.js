@@ -11,7 +11,7 @@ $('.theme-toggler').on('click', function() {
       $('.chat__box img').attr('src', 'imgs/help-icon-dark.png')
     } else {
       $('.help__icon img').attr('src', 'imgs/help-icon-light.png')
-      $('.chat__box img').attr('src', 'imgs/help-icon-dark.png')
+      $('.chat__box img').attr('src', 'imgs/help-icon-light.png')
     }
 });
 // Keymap Content Toggler
