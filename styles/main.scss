@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
 
 @import "./sass/helpers/mixins";
+@import "./sass/main";
 @import "./sass/components/navbar";
 @import "./sass/components/help";
 @import "./sass/components/terms-modal";
 @import "./sass/components/footer";
-@import "./sass/components/chat-box";
 @import "./sass/pages/about";
-@import "./sass/main";
 

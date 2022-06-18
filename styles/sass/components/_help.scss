@@ -1,6 +1,6 @@
-// Help
+/* Help */
 .help {
-    position: absolute;
+    position: fixed;
     right: 40px;
     bottom: 30px;
     left: auto;
@@ -22,7 +22,6 @@
     }
     @media screen and (max-width: 768px) {
         right: 10px;
-        bottom: 70px;
         html[dir=rtl] & {
             right: auto;
             left: 10px;
@@ -31,7 +30,7 @@
 }
 
 .chat__box {
-    position: absolute;
+    position: fixed;
     right: 40px;
     bottom: 75px;
     height: 500px;
@@ -46,7 +45,7 @@
         left: 40px;
     }
     @media screen and (max-width: 768px){
-        top: -80px;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
@@ -93,6 +92,7 @@
         .chat__message {
             .chat__message__img {
                 width: 30px;
+                margin-inline-end: .5rem;
             }
             .chat__message__body {
                 .message {
@@ -127,6 +127,7 @@
                 .chat-ques {
                     .question {
                         cursor: pointer;
+                        user-select: none;
                     }
                 }
             }

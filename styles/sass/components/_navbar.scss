@@ -1,6 +1,9 @@
 // navbar
 .navbar {
     background: var(--background-dark);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
     // brand
     .navbar-brand {
         img {
@@ -8,6 +11,10 @@
             margin-inline-start: 3px;
             html[dir="rtl"] & {
                 margin-inline-start: -9px;
+            }
+            @media screen and (max-width: 768px) {
+                margin-right: 0;
+                width: 50pxpx;
             }
         }
         @media screen and (max-width: 768px) {
@@ -116,34 +123,9 @@
                     }
                 }
                 @media screen and (max-width: 768px) {
-                    padding: 0 !important;
                     width: auto;
                     height: 50px;
                     margin: 3px;
-                }
-                // &.active {
-                    
-                // }
-            }
-            .select-group {
-                width: 50px !important;
-                .select {
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;       /* Remove default arrow */
-                    background-image: url(...);   /* Add custom arrow */
-                    // background: var(--bkg-clr-dark-l);
-                    // color: var(--main-txt-clr);
-                    &::after {
-                        position: absolute;
-                        content: "";
-                        top: 14px;
-                        right: 10px;
-                        width: 0;
-                        height: 0;
-                        border: 6px solid transparent;
-                        border-color: #fff transparent transparent transparent;
-                    }
                 }
             }
         }
@@ -152,11 +134,14 @@
     .navbar-toggler {
         background: var(--prim-bkg-clr-l);
         outline: 0;
+        width: 45px;
         span {
+            width: auto;
             @include flex-position(flex, center, center);
             .fa-bars {
                 color: var(--bkg-clr-dark);
                 font-size: 22px;
+                
             }
         }
     }

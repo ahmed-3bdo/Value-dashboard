@@ -28,10 +28,22 @@
         <div class="nav__user nav__user--mobile d-flex d-lg-none">
           <div class="user__items">
             <button class="btn user__item sign-button btn-link my-2 my-sm-0" type="submit">Sign In</button>
+
             <button class="btn user__item theme-toggler">
               <i class="fa fa-moon-o moon-icon theme-changer-icon" aria-hidden="true"></i>
               <i class="fa fa-sun-o sun-icon theme-changer-icon" aria-hidden="true"></i>
             </button>
+
+            <div class="dropdown user__item">
+              <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">En</a>
+                <a class="dropdown-item" href="#">Ar</a>
+                <a class="dropdown-item" href="#">Fr</a>
+              </div>
+            </div>
         
             <button class="btn user__item notification-button">
               <i class="fa fa-bell-o" aria-hidden="true"></i>
@@ -62,9 +74,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav navbar__nav mr-auto">
             <li class="nav-item nav__item">
-              <a class="nav-link active" href="#">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item nav__item">
+            <li class="nav-item nav__item active">
               <a class="nav-link" href="#">Services <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item nav__item">
@@ -74,6 +86,7 @@
               <a class="nav-link" href="#">Blog</a>
             </li>
           </ul>
+          
           <!-- Navigation Search Box -->
           <form class="form-inline my-2 my-lg-0 nav-form nav__form">
             <input class="form-control mr-sm-2 shadow-none" type="search" placeholder="" aria-label="Search">
@@ -81,14 +94,27 @@
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
+
           <!-- Navigation User Items -->
           <div class="nav__user d-none d-lg-flex">
             <div class="user__items">
               <button class="btn user__item sign-button btn-link my-2 my-sm-0" type="submit">Sign In</button>
+              
               <button class="btn user__item theme-toggler">
                 <i class="fa fa-moon-o moon-icon theme-changer-icon" aria-hidden="true"></i>
                 <i class="fa fa-sun-o sun-icon theme-changer-icon" aria-hidden="true"></i>
               </button>
+
+              <div class="dropdown user__item">
+                <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Ar</a>
+                  <a class="dropdown-item" href="#">En</a>
+                  <a class="dropdown-item" href="#">FR</a>
+                </div>
+              </div>
           
               <button class="btn user__item notification-button">
                 <i class="fa fa-bell-o" aria-hidden="true"></i>
@@ -232,114 +258,197 @@
             </div>
           </div>
 
+          <!-- Footer -->
+          <div class="container-fluid">
+            <footer class="footer mt-4 p-4 bkg-box d-flex justify-content-between align-items-center">
+              <div class="copy-right d-flex flex-column align-items-start">
+                <span class="copy-right__text">Powerd by AITSP</span>
+                <span class="copy-right__text">All Copyright &copy; Reserved</span>
+              </div>
+              <ul class="social-media list-unstyled d-flex align-items-center mb-0">
+                <li>
+                  <a href="#" class="p-1 mx-2">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="p-1 mx-2">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="p-1 mx-2">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </footer>
+          </div>
+  
         </div><!-- Dashboard Main Contetnt-->
 
         <!-- Help Icon -->
-        <div class="help">
-          <div class="help__icon">
+        <div id="help" class="help d-flex flex-column align-items-end">
+          <!-- Help Icon -->
+          <div id="help__icon" class="help__icon">
             <img src="imgs/help-icon-light.png" alt="help-icon">
           </div>
         </div>
+  
+        <!-- Chat Box -->
+        <div class="chat__box rounded">
 
+            <!-- Chat box header -->
+            <div class="media chat__header align-items-center sticky-top d-flex py-2 px-4">
+              <div class="chat__header__img p-2 rounded-circle mr-3">
+                <img src="imgs/help-icon-light.png" class="align-self-center img-fluid" alt="chat icon">
+              </div>
+              <div class="chat__header__body d-flex flex-column align-items-start media-body">
+                <h5 class="mt-0 mb-0">Chat with us!</h5>
+                <p class="mb-0">online</p>
+              </div>
+              <button type="button" class="close chat__header__close align-self-start" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="chat__box__content">
+              <!-- Chat Message Right -->
+              <div class="chat__message media p-2 right__message">
+                <div class="media-body chat__message__body">
+                  <div class="message bkg-box mb-1 p-3"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere voluptate amet doloribus natus quod mollitia, suscipit consequuntur nihil tempora, accusantium</div>
+                  <div class="message__time">
+                    <span class="time">01:00</span>
+                    <span class="day-night">AM</span>
+                  </div>
+                </div>
+                <div class="chat__message__img align-self-end mb-4"></div>
+              </div>
+
+              <!-- Chat Message Bot -->
+              <div class="chat__message media p-2 left__message chat__bot">
+                <div class="chat__message__img align-self-end mb-4">
+                  <img src="imgs/help-icon-light.png" class="align-self-center img-fluid" alt="Message icon">
+                </div>
+                <div class="media-body chat__message__body">
+                  <div class="message bkg-box mb-1 p-3"> 
+                    <div class="chat-ques d-flex flex-column ">
+                      <p class="mb-1">Choose Question</p>
+                      <span class="question bkg-box p-2 my-1">How Are You?</span>
+                      <span class="question bkg-box p-2 my-1">How Old Are You?</span>
+                      <span class="question bkg-box p-2 my-1">How Do You Do?</span>
+                    </div>
+                  </div>
+                  <div class="message__time">
+                    <span class="time">01:00</span>
+                    <span class="day-night">AM</span>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+        </div>
+  
         <!-- Terms Modal -->
         <!-- Modal -->
         <div class="modal fade" id="termsleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"></h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h3>Defining the terms:</h3>
-                  <!-- Terms box-1 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">Date of Sampling</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">when the sampling was conducted and last updated</p>
-                    </div>
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h3>Defining the terms:</h3>
+                <!-- Terms box-1 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">Date of Sampling</span>
+                    <i class="fa fa-angle-down"></i>
                   </div>
-                  <!-- Terms box-2 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">Sampling Size (Number of Companies)</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">number of companies that we sampled for this research work</p>
-                    </div>
-                  </div>
-                  <!-- Terms box-3 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">Number of Countries (Number)</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">number of companies that we sampled for this research work belonging in how many countries</p>
-                    </div>
-                  </div>
-                  <!-- Terms box-4 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">Number of Sectors (Number)</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">number of companies that we sampled for this research work belonging in how many sectors</p>
-                    </div>
-                  </div>
-                  <!-- Terms box-5 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">Published Values in Website (Number</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">total number of values published by the number ofsampled</p>
-                    </div>
-                  </div>
-                  <!-- Terms box-6 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">No Published Values in Website (Number)</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">number of sampled companies who have no published values in their websites</p>
-                    </div>
-                  </div>
-                  <!-- Terms box-7 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">Worldwide Common Values (total identified values)</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">from the common core filtering process,the number of common values from the total sampled companies</p>
-                    </div>
-                  </div>
-                  <!-- Terms box-8 -->
-                  <div class="terms__box bkg-box mt-3 mb-3">
-                    <div class="title__box p-4 d-flex justify-content-between">
-                      <span class="text">Worldwide Top 10 Values</span>
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="slide__box">
-                        <p class="p-4 mb-0">based on the available data, arranging the rank of values</p>
-                    </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">when the sampling was conducted and last updated</p>
                   </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- Terms box-2 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">Sampling Size (Number of Companies)</span>
+                    <i class="fa fa-angle-down"></i>
+                  </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">number of companies that we sampled for this research work</p>
+                  </div>
+                </div>
+                <!-- Terms box-3 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">Number of Countries (Number)</span>
+                    <i class="fa fa-angle-down"></i>
+                  </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">number of companies that we sampled for this research work belonging in how many countries</p>
+                  </div>
+                </div>
+                <!-- Terms box-4 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">Number of Sectors (Number)</span>
+                    <i class="fa fa-angle-down"></i>
+                  </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">number of companies that we sampled for this research work belonging in how many sectors</p>
+                  </div>
+                </div>
+                <!-- Terms box-5 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">Published Values in Website (Number</span>
+                    <i class="fa fa-angle-down"></i>
+                  </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">total number of values published by the number ofsampled</p>
+                  </div>
+                </div>
+                <!-- Terms box-6 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">No Published Values in Website (Number)</span>
+                    <i class="fa fa-angle-down"></i>
+                  </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">number of sampled companies who have no published values in their websites</p>
+                  </div>
+                </div>
+                <!-- Terms box-7 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">Worldwide Common Values (total identified values)</span>
+                    <i class="fa fa-angle-down"></i>
+                  </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">from the common core filtering process,the number of common values from the total sampled companies</p>
+                  </div>
+                </div>
+                <!-- Terms box-8 -->
+                <div class="terms__box bkg-box mt-3 mb-3">
+                  <div class="title__box p-4 d-flex justify-content-between">
+                    <span class="text">Worldwide Top 10 Values</span>
+                    <i class="fa fa-angle-down"></i>
+                  </div>
+                  <div class="slide__box">
+                      <p class="p-4 mb-0">based on the available data, arranging the rank of values</p>
+                  </div>
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
             </div>
+          </div>
         </div>
 
       </div><!-- End Dashboard Content -->

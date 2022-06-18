@@ -1,33 +1,32 @@
 :root {
-        // Bkg dark & dark lighter
-        --bkg-clr-dark: rgb(0, 3, 32);
+        /* Bkg dark & dark lighter */
+        --bkg-clr-dark: #000320;
         --bkg-clr-dark-transparent: 0, 3, 32;
-        --bkg-clr-dark-l: rgb(0, 39, 109);
+        --bkg-clr-dark-l: #00276d;
         --bkg-clr-dark-l-transparent: 0, 39, 109;
-        --bkg-clr-box-dark: rgb(0, 3, 32, .6);
+        --bkg-clr-box-dark: rgba(0, 3, 32, 0.6);
 
-        // bkg-prim & prim-lighter
-        --prim-bkg-clr: rgb(0, 150, 171);
-        --prim-bkg-clr-l: rgb(0, 235, 227);
+        /* bkg-prim & prim-lighter */
+        --prim-bkg-clr: #0096ab;
+        --prim-bkg-clr-l: #00ebe3;
 
-        // border color
-        --border-clr: rgb(0, 3, 32);
+        /* border color */
+        --border-clr: #000320;
 
-        // Light Text Colors
-        --main-txt-clr: rgb(196, 196, 196);
-        --sec-txt-clr: rgb(180, 180, 180);
+        /* Light Text Colors */
+        --main-txt-clr: #c4c4c4;
+        --sec-txt-clr: #b4b4b4;
 
-        // Special Text-Colors
-        --prim-main-txt-clr: rgb(0, 235, 227);
-        --prim-sec-txt-clr-l: rgb(0, 150, 171);
+        /* Special Text-Colors */
+        --prim-main-txt-clr: #00ebe3;
+        --prim-sec-txt-clr-l: #0096ab;
 
         --background-dark: radial-gradient(circle, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark) 90%);
 
         --background-prim-border: radial-gradient(circle, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark-l, 1) 0%, var(--prim-bkg-clr) 140%);
-
 }
 
-// Main Style
+/* Main Style */
 body {
     background: var(--background-dark);
     color: var(--main-txt-clr);
@@ -37,7 +36,7 @@ body {
     scroll-behavior: smooth;
 }
 
-// links & butons style
+/* links & butons style */
 a, .btn {
     color: var(--main-txt-clr); 
     text-decoration: none !important;
@@ -48,7 +47,7 @@ a, .btn {
         color: var(--prim-main-txt-clr) !important;
     }
 } 
-// Buttons Style
+/* Buttons Style */
 .btn {
     background: var(--background-dark);
     padding: 5px !important;
@@ -66,14 +65,14 @@ button.close {
     }
 }
 
-// Front Boxes Style and background
+/* Front Boxes Style and background */
 .bkg-box,
 #world-map .jvectormap-container {
     background: var(--bkg-clr-box-dark) !important;
     border-radius: 5px;
 }    
 
-// Boxes With Gradient Border
+// Boxes With Gradient Border */
 .gradient-border {
     position: relative;
     border-radius: 3px;
@@ -89,18 +88,18 @@ button.close {
     }
 }
 
-// Reset Shadow
+/* Reset Shadow */
 .btn, .form-control, button[type='submit'] {
     outline: 0 !important;
     box-shadow: none !important;
 }
 
-// SelectBox Left And Right Arrows
+/* SelectBox Left And Right Arrows */
 .arrows-rest-pages {
     margin: 25px 25px 0 !important; 
 }
 
-// Form & Inputs style and background
+/* Form & Inputs style and background */
 .form-control, .search-country__box {
     background-color: var(--bkg-clr-dark-l);
     border: 1px solid var(--border-clr);
@@ -109,11 +108,6 @@ button.close {
         background-color: var(--bkg-clr-dark-l);
         border: 1px solid var(--border-clr);
     }
-}
-
-// hide pages
-.page-section {
-    height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -130,27 +124,24 @@ button.close {
   }
 
 
-// Dashboard
+/* Dashboard */
 #dashboard {
     background: var(--bkg-clr);
     min-height: 100vh;
     position: relative;
     overflow: hidden;
 
-    // Dashboard Content
+    // Dashboard Content 
     .dashboard-content {
         display: flex;
         position: relative;
-        // @media screen and (max-width: 768px) {
-        //     padding-left: 0%;
-        // }
         @media screen and (min-width: 991px) {
             @include pad-mar(padding, auto, 0, auto, 100px);
         }
-        // Side Bar Menu
+        // Side Bar Menu 
         .side-bar {
             @include position(fixed, 76px, auto, auto, 0);
-            z-index: 20;
+            z-index: 105;
             @media screen and (max-width: 991px) {
                 left: -90px;
                 html[dir=rtl] & {
@@ -182,7 +173,6 @@ button.close {
                 }
                 i {
                     font-size: 20px;
-                    font-weight: bold;
                     color: var(--bkg-clr-dark);
                     opacity: 1;
                     text-align: center;
@@ -262,9 +252,6 @@ button.close {
                     &:hover {
                         color: var(--prim-main-txt-clr);
                     }
-                    // @media screen and (max-width: 768px) {
-                    //     padding-bottom: 90px;
-                    // }
                 }
                 @media screen and (min-width: 768px) {
                     &:hover{
@@ -332,19 +319,16 @@ button.close {
             }
         }
 
-        // Main Dashboard Content
+        // Main Dashboard Content 
         .dashboard__main-content {
+            overflow: hidden;
+            overflow-y: auto;
             width: 100%;
-            > div {
-                padding: 15px 40px;
-                height: calc(100vh - 77px);
-                overflow: hidden;
-                overflow-y: auto;
-                @media screen and (max-width: 768px) {
-                    padding: 30px;
-                }
+            padding: 77px 20px 0;
+            @media screen and (max-width: 768px) {
+                padding: 90px 0 30px;
             }
-            // Countries and sectors section
+            // Countries and sectors section 
             .countries-sectors {
                 .heading {
                     justify-content: flex-start;
@@ -428,7 +412,7 @@ button.close {
                 }
             }
 
-            // parameters section
+            // parameters section 
             .parameters-text {
                 background: var(--background-dark);
                 border-radius: 5px;
@@ -535,7 +519,7 @@ button.close {
     }
 
 
-    // Benchmarking My Values Page
+    // Benchmarking My Values Page 
     .benchmarking-my-values-page {
         form {
             .submit-form {
@@ -576,28 +560,28 @@ button.close {
 
 
 :root.light-theme {
-        // Bkg dark & dark lighter
-        --bkg-clr-dark: rgb(240, 241, 255);
+        /* Bkg dark & dark lighter */
+        --bkg-clr-dark: #f0f1ff;
         --bkg-clr-dark-transparent: 255, 255, 255;
-        --bkg-clr-dark-l: rgb(255, 255, 255);
+        --bkg-clr-dark-l: #ffffff;
         --bkg-clr-dark-l-transparent: 255, 255, 255;
         --bkg-clr-box-dark: rgb(255, 255, 255, 1);
-        // bkg-prim & prim-lighter
-        --prim-bkg-clr: rgb(0, 192, 186);
-        --prim-bkg-clr-l: rgb(0, 212, 205);
-        // Light Text Colors
-        --main-txt-clr: rgb(0, 3, 32);
+        /* bkg-prim & prim-lighter */
+        --prim-bkg-clr: #00c0ba;
+        --prim-bkg-clr-l: #00d4cd;
+        /* Light Text Colors */
+        --main-txt-clr: #000320;
         --white: rgb(0, 3, 32);
-        --sec-txt-clr: rgb(180, 180, 180);
-        // Special Text-Colors
-        --prim-main-txt-clr: rgb(0, 192, 186);
-        --prim-sec-txt-clr-l: rgb(0, 150, 171);
+        --sec-txt-clr: #b4b4b4;
+        /* Special Text-Colors */
+        --prim-main-txt-clr: #00c0ba;
+        --prim-sec-txt-clr-l: #0096ab;
 
         --background-dark: radial-gradient(circle, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark) 90%);
 
         --background-prim-border: radial-gradient(circle, var(--bkg-clr-dark-l, 1) 0%, var(--bkg-clr-dark-l, 1) 0%, var(--prim-bkg-clr) 140%);
 
-    // Main Style
+    // Main Style 
     body {
         background: var(--bkg-clr-dark);
     }
@@ -605,7 +589,7 @@ button.close {
         background: var(--bkg-clr-dark-l);
     }
 
-    // Navbar
+    // Navbar 
     .navbar {
         background: radial-gradient(circle, rgb(0, 39, 109) 0%, rgb(0, 39, 109) 0%, rgb(0, 3, 32) 90%) !important;   
         a, i, .btn {
@@ -617,7 +601,7 @@ button.close {
         }
     }
 
-    // Side bar
+    // Side bar 
     .side-bar {
         > div {
             background: radial-gradient(circle, rgb(0, 39, 109) 0%, rgb(0, 39, 109) 0%, rgb(0, 3, 32) 90%) !important;
@@ -627,12 +611,12 @@ button.close {
         }
     }
 
-    // Light background class
+    // Light background class 
     .light-background {
         background: var(--bkg-clr-dark-l) !important;
     }
 
-    // World map Section
+    // World map Section 
     .world-map__section {
         .keymap__box {
             .keymap__icon {
