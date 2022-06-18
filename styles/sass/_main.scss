@@ -35,6 +35,12 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
 }
+.page-section {
+    margin-top: 77px;
+    @media screen and (max-width: 768px) {
+        margin-top: 90px;
+    }
+}
 
 /* links & butons style */
 a, .btn {
@@ -45,6 +51,7 @@ a, .btn {
     }
     &.active {
         color: var(--prim-main-txt-clr) !important;
+        font-weight: bold;
     }
 } 
 /* Buttons Style */
@@ -144,10 +151,10 @@ button.close {
             overflow: hidden;
             overflow-y: auto;
             width: 100%;
-            padding: 77px 20px 0;
-            @media screen and (max-width: 768px) {
-                padding: 90px 0 0;
-            }
+            // padding: 77px 20px 0;
+            // @media screen and (max-width: 768px) {
+            //     padding: 90px 0 0;
+            // }
             // Countries and sectors section 
             .countries-sectors {
                 .heading {
@@ -338,44 +345,6 @@ button.close {
  
     }
 
-
-    // Benchmarking My Values Page 
-    .benchmarking-my-values-page {
-        form {
-            .submit-form {
-                @media screen and (min-width: 991px) {
-                    justify-content: flex-start !important;
-                }
-                button[type=submit] {
-                    background: var(--prim-bkg-clr);
-                    border-radius: 10px;
-                    border: none;
-                    width: 35px;
-                    height: 35px;
-                    position: relative;
-                    transform: rotate(45deg);
-                    cursor: pointer;
-                    i {
-                        position: absolute;
-                        top: 31%;
-                        left: 52%;
-                        transform: translate(-50%, -50%) rotate(-45deg);
-                        font-size: 34px;
-                        color: var(--white);
-                    }
-                }
-            }
-        }
-        .countries-sectors {
-            .values-section {
-                .search-div {
-                    @media screen and (max-width: 768px) {
-                        width: auto;
-                    }
-                }
-            }
-        }
-    }
 }
 
 
@@ -432,8 +401,11 @@ button.close {
                 color: rgb(196, 196, 196);
             }
         }
-        .side-bar__btn-toggler i {
-            color: var(--main-txt-clr) !important;
+        .side-bar__btn-toggler {
+            background: var(--prim-bkg-clr-l);
+            i {
+                color: var(--main-txt-clr) !important;
+            }
         }
     }
 
