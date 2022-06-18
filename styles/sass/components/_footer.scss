@@ -1,6 +1,8 @@
 /*** Footer ***/
 footer {
     flex-wrap: wrap;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
     row-gap: 10px;
     .social-media {
         padding-inline-end: 20px;

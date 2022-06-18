@@ -1,0 +1,182 @@
+        /* Side Bar Menu */
+        .side-bar {
+            @include position(fixed, 76px, auto, auto, 0);
+            z-index: 105;
+            @media screen and (max-width: 991px) {
+                left: -90px;
+                html[dir=rtl] & {
+                    left: auto;
+                    right: -90px;
+                }
+            }
+            .side-bar__btn-toggler {
+                @include position(absolute, 20px, -30px, auto, auto);
+                border: none;
+                border-radius: 0;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background: var(--prim-bkg-clr-l);
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 99;
+                display: none;
+                overflow: hidden;
+                transition: all .3s ease-in-out;
+                html[dir=rtl] & {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-top-left-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                }
+                i {
+                    font-size: 20px;
+                    color: var(--bkg-clr-dark);
+                    opacity: 1;
+                    text-align: center;
+                    text-shadow: none;
+                    transition: all .3s ease-in-out;
+                    html[dir=rtl] & { 
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                background: var(--background-dark);        
+                width: 90px;
+                height: calc(100vh - 76px);
+                overflow: hidden;
+                overflow-y: auto;
+                padding: 0 14px;
+                transition: all .2s ease-in-out;
+                padding-bottom: 30px;
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+                .side-bar__items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 20px 0;
+                    .side-bar__item {
+                        width: 100%;
+                        padding: 3px 0;
+                        a {
+                            display: flex;
+                            justify-content:flex-start;
+                            align-items: center;
+                            width: 100%;
+                            padding: 10px;
+                            position: relative;
+                            text-decoration: none;
+                            .side-bar__item--icon {
+                                width: 40px;
+                                height: 40px;
+                            }
+                            .side-bar__item--text {
+                                opacity: 0;
+                                transition: all .2s ease-out;
+                                margin-left: 15px;
+                                white-space:nowrap;
+                                font-weight: bold;
+                                html[dir=rtl] & {
+                                    margin-left: 0;
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                hr {
+                    background-color: var(--bkg-clr-grad-one);
+                }
+                a.terms {
+                    font-weight: bold;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    margin-left: 10px;
+                    html[dir=rtl] & {
+                        margin-left: 0;
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        color: var(--prim-main-txt-clr);
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    &:hover{
+                        width: 395px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        html[dir=rtl] & {
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                            border-top-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                        }
+                        .side-bar__item {
+                            a {
+                                .side-bar__item--text {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+        
+                    }
+                }
+
+            }
+            &.opened {
+                height: 100vh;
+                width: 100%;
+                top: 0;
+                left: 0;
+                html[dir=rtl] & {
+                    left: auto;
+                    right: 0;
+                }
+                .side-bar__btn-toggler {
+                    right: 30px;
+                    border-radius: 50%;
+                    html[dir=rtl] & {
+                        right: auto;
+                        left: 30px;
+                        border-radius: 50%;
+                    }
+                    .open {
+                        display: none;
+                    }
+                    .close {
+                        display: block;
+                        margin-right: 2px;
+                        margin-top: -2px;
+                        html[dir=rtl] & {
+                            margin-top: 1px;
+                            margin-right: 2px;
+                            margin-left: auto;
+                         }
+                    }
+                }
+                > div {
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 30px;
+                    padding-bottom: 150px;
+                    .side-bar__item {
+                        a {
+                            .side-bar__item--text {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
