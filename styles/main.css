@@ -1250,9 +1250,11 @@ footer {
   row-gap: 20px;
 }
 
-footer .social-media {
-  -webkit-padding-end: 20px;
-          padding-inline-end: 20px;
+@media screen and (min-width: 768px) {
+  footer .social-media {
+    -webkit-padding-end: 30px;
+            padding-inline-end: 30px;
+  }
 }
 
 footer .social-media li a {

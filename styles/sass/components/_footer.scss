@@ -6,7 +6,9 @@ footer {
     column-gap: 20px;
     row-gap: 20px;
     .social-media {
-        padding-inline-end: 20px;
+        @media screen and (min-width: 768px) {
+            padding-inline-end: 30px;
+        }
         li {
             a {
                 padding: 20px;
