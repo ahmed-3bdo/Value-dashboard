@@ -1,3 +1,8 @@
+// Spinner
+$(window).on('load', function () {
+  $("#spinner").removeClass("show");
+})
+
 $('.side-bar__btn-toggler').on('click', function() {
   $('.side-bar').toggleClass('opened');
 })

@@ -1,0 +1,26 @@
+#spinner {
+    background: var(--bkg-clr-dark);
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition: opacity .5s ease-out;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .5s ease-out;
+    }
+    .spinner-border {
+        border: 5px solid var(--prim-bkg-clr);
+        border-radius: 50%;
+        border-bottom-color: transparent;
+        animation: spinner 800ms linear infinite forwards;
+    }
+}
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }

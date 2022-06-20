@@ -19,6 +19,14 @@
 <body>
     <!-- Start Dashboard-->
     <div class="dashboard" id="dashboard">
+
+      <!-- Spinner -->
+      <div id="spinner" class="show position-fixed w-100 d-flex align-items-center justify-content-center">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+
       <!-- Navigation bar-->
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
@@ -35,10 +43,10 @@
             </button>
 
             <div class="dropdown user__item">
-              <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuLnaguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-globe" aria-hidden="true"></i>
               </button>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLnaguage">
                 <a class="dropdown-item" href="#">En</a>
                 <a class="dropdown-item" href="#">Ar</a>
                 <a class="dropdown-item" href="#">Fr</a>
@@ -50,10 +58,10 @@
             </button>
 
             <div class="dropdown user__item">
-              <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-user-o" aria-hidden="true"></i>
               </button>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuUser">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Something else here</a>
@@ -106,10 +114,10 @@
               </button>
 
               <div class="dropdown user__item">
-                <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-globe" aria-hidden="true"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLang">
                   <a class="dropdown-item" href="#">Ar</a>
                   <a class="dropdown-item" href="#">En</a>
                   <a class="dropdown-item" href="#">FR</a>
@@ -121,10 +129,10 @@
               </button>
 
               <div class="dropdown user__item">
-                <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn user__item dropdown-toggle" type="button" id="dropdownMenuuser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-user-o" aria-hidden="true"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuuser">
                   <a class="dropdown-item" href="#">Action</a>
                   <a class="dropdown-item" href="#">Another action</a>
                   <a class="dropdown-item" href="#">Something else here</a>
@@ -149,37 +157,37 @@
           <div>
             <ul class="side-bar__items list-unstyled">
               <li class="side-bar__item side__item--menu">
-                <a href="index.html" class="page-section-link active" data-class=".home-page">
+                <a href="index.html" class="page-section-link active">
                   <img src="imgs/home.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text" >Home</span>
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="#" class="page-section-link" data-class=".worldwide-page">
+                <a href="#" class="page-section-link">
                   <img src="imgs/world-wide.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Worldwide Corporate Core Values</span>
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="#" class="page-section-link" data-class=".corporate-value-page">
+                <a href="#" class="page-section-link">
                   <img src="imgs/corporate-values.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Corporate Values Profiling by Country</span>
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="benchmark.html" class="page-section-link" data-class=".worldwide-cor-page">
+                <a href="benchmark.html" class="page-section-link">
                   <img src="imgs/sector.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Worldwide Corporate Values by Sector</span>
                 </a>
               </li>
               <li class="side-bar__item side__item--menu">
-                <a href="benchmark.html" class="page-section-link" data-class=".benchmarking-my-values-page">
+                <a href="benchmark.html" class="page-section-link">
                   <img src="imgs/sectoral.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Sectoral Corporate Values by Country</span>
                 </a>
               </li>
               <li class="side-bar__item side__item--menu terms">
-                <a href="benchmarking-values.html" class="page-section-link"data-class=".benchmark-page" >
+                <a href="benchmarking-values.html" class="page-section-link">
                   <img src="imgs/benchmark.png" class="side-bar__item--icon" alt="home">
                   <span class="side-bar__item--text">Benchmarking Corporate Values</span>
                 </a>
@@ -341,8 +349,8 @@
 
           <!-- Footer -->
           <div class="container-fluid">
-            <footer class="footer mt-4 p-4 bkg-box d-flex justify-content-between align-items-center">
-                <div class="copy-right d-flex flex-column align-items-start">
+            <footer class="footer mt-4 p-4 bkg-box d-flex justify-content-center justify-content-sm-between align-items-center">
+                <div class="copy-right d-flex flex-column align-items-center align-items-sm-start">
                   <span class="copy-right__text">Powerd by AITSP</span>
                   <span class="copy-right__text">All Copyright &copy; Reserved</span>
                 </div>
@@ -437,7 +445,6 @@
           <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>

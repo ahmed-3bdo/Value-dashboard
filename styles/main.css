@@ -1,4 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+#spinner {
+  background: var(--bkg-clr-dark);
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  -webkit-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out;
+}
+
+#spinner.show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out;
+}
+
+#spinner .spinner-border {
+  border: 5px solid var(--prim-bkg-clr);
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  -webkit-animation: spinner 800ms linear infinite forwards;
+          animation: spinner 800ms linear infinite forwards;
+}
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 :root {
   /* Bkg dark & dark lighter */
   --bkg-clr-dark: #000320;
@@ -1202,7 +1245,9 @@ footer {
       flex-wrap: wrap;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-  row-gap: 10px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
 }
 
 footer .social-media {

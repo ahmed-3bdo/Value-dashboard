@@ -49,16 +49,3 @@
     }
 }
 
-// // abs-position
-// @mixin position($property, $top, $right, $bottom, $left) {
-//     position: #{$property};
-//     top: $top;
-//     right: $right;
-//     bottom: $bottom;
-//     left: $left;
-//     [dir=rtl] & {
-//         right: $left;
-//         left: $right;
-//     }
-// }
-
