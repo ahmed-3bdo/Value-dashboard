@@ -1328,4 +1328,16 @@ footer .social-media li a i {
     width: auto;
   }
 }
+
+/* Top 100 Ranking Pgae*/
+.top-100-page .countries__rank__box .country__box .rank__box .title {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.top-100-page .countries__rank__box .country__box .rank__box .rank {
+  color: var(--prim-main-txt-clr);
+  font-size: 40px;
+  font-weight: 900;
+}
 /*# sourceMappingURL=main.css.map */
