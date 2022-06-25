@@ -84,6 +84,11 @@ body {
   }
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 /* links & butons style */
 a, .btn {
   color: var(--main-txt-clr);
@@ -1339,5 +1344,19 @@ footer .social-media li a i {
   color: var(--prim-main-txt-clr);
   font-size: 40px;
   font-weight: 900;
+}
+
+.top-100-page .countries__rank__box .country__box .show-more {
+  padding: 18px 32px !important;
+}
+
+.top-100-page .pagination li .page-link {
+  background-color: var(--bkg-clr-box-dark) !important;
+  border: var(--border-clr);
+  color: var(--main-txt-clr);
+}
+
+.top-100-page .pagination li.active .page-link {
+  color: var(--prim-main-txt-clr);
 }
 /*# sourceMappingURL=main.css.map */

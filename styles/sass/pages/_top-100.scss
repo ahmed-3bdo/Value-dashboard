@@ -13,6 +13,23 @@
                     font-weight: 900;
                 }
             }
+            .show-more {
+                padding: 18px 32px !important;
+            }
+        }
+    }
+    .pagination {
+        li {
+            .page-link {
+                background-color: var(--bkg-clr-box-dark) !important;
+                border: var(--border-clr);
+                color: var(--main-txt-clr)
+            }
+            &.active {
+                .page-link {
+                    color: var(--prim-main-txt-clr)
+                }
+            }
         }
     }
 }
