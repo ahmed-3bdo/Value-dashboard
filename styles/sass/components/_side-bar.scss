@@ -143,11 +143,11 @@
         }
         .side-bar__btn-toggler {
             right: 30px;
-            border-radius: 50%;
+            border-radius: 5px;
             html[dir=rtl] & {
                 right: auto;
                 left: 30px;
-                border-radius: 50%;
+                border-radius: 5px;
             }
             .open {
                 display: none;
