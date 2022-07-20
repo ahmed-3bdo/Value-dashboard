@@ -7,7 +7,9 @@ var gdpData = {
 };
 
 $('#world-map').vectorMap({
-  zoomOnScroll: true,
+  panOnDrag: true,
+  zoomOnScroll: false,
+  zoomAnimate: true,
   map: 'world_mill',
   regionStyle: {
     initial: {

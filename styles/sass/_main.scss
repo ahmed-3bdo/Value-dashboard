@@ -261,10 +261,27 @@ button.close {
                         }
                     }
                     @media screen and (max-width: 1200px) {
-                        &:not(:last-child) {
+                        margin-bottom: 50px;
+                        padding-bottom: 20px;
+                        &:nth-child(5),
+                        &:nth-child(6) {
+                            margin-bottom: 0;
+                        }
+                    }
+                    @media screen and (max-width: 991px) {
+                        &:nth-child(4),
+                        &:nth-child(5),
+                        &:nth-child(6) {
+                            margin-bottom: 0;
+                        }
+                    }
+                    @media screen and (max-width: 575px) {
+                        &:nth-child(4),
+                        &:nth-child(5){
                             margin-bottom: 50px;
+                        }
+                        &:not(:last-child) {
                             border-bottom: 2px solid var(--bkg-clr-box-dark);
-                            padding-bottom: 20px;
                         }
                     }
                     .parameter__icon {
